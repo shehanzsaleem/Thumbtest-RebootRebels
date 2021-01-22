@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 
-const element = <h1>Hello World</h1>;
-console.log(element);
+import registerServiceWorker from "./registerServiceWorker";
 
-// ReactDOM.render
-// React.createElement
+
+import Header from './components/header';
+
+
+
+
+ReactDOM.render(<Header />, document.getElementById("root"));
+registerServiceWorker();
