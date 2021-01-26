@@ -1,129 +1,145 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Reboot</title>
-<script type="text/javascript" src="data.json">
-console.log("data.json");
-</script>
+    <title>Reboot</title>
+    <script type="text/javascript" src="data.json">
+        console.log("data.json");
+    </script>
 
-<script>
-fetch("data.json");
-</script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<script src="script.js"></script>
+    <script>
+        fetch("data.json");
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="script.js"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
-<meta name="theme-color" content="#1b1c22">
-<meta name="msapplication-navbutton-color" content="#1b1c22">
-<meta name="apple-mobile-web-app-status-bar-style" content="#df0e34">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
-<meta charset="utf-8">
-<meta name="author" content="">
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1b1c22">
+    <meta name="msapplication-navbutton-color" content="#1b1c22">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#df0e34">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style type="text/css">
- html body { 
- background-repeat: no-repeat;
- background-size: fill;
- background-color: #222222 !important;
- color: white;} /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
-</style>
-<link href="style.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style type="text/css">
+        html body {
+            background-repeat: no-repeat;
+            background-size: fill;
+            background-color: #222222 !important;
+            color: white;
+        }
 
-<style>
- /* width */
- ::-webkit-scrollbar {
- width: 10px;
- }
- /* Track */
- ::-webkit-scrollbar-track {
- background: #f1f1f1; 
- }
- /* Handle */
- ::-webkit-scrollbar-thumb {
- background: #888; 
- }
- /* Handle on hover */
- ::-webkit-scrollbar-thumb:hover {
- background: #555; 
- }
-</style>
+        /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    </style>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
+
 <body>
-<div class="topnav" id="myTopnav">
-<a href="#home">
-    <img id="logo" aria-activedescendant="" src="Other Files/Logo-02.png">
-</a>
-<!--<a href="#news">News</a>
+
+    <div class="topnav" id="myTopnav">
+        <a href="#home">
+            <img id="logo" aria-activedescendant="" src="ui/src/images/Logo/Logo-02.png">
+        </a>
+        <!--<a href="#news">News</a>
 <a href="#contact">Contact</a>
 <a href="#about">About</a>
 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 <i class="fa fa-bars"></i>
 </a>
 -->
-</div>
+    </div>
 
-<div class="container app-main" style="background-color: #2f2e33;">
+    <div class="container app-main" style="background-color: #2f2e33;">
 
-<div class="row">
-<div class="col-12">
-<div class="title-banner">
-<div class="center">
-<h3><span class="icon"></span>Test Your Youtube Thumnail</h3>
-<h6 class="thin">Score Your Youtube Thumnail based on Machine Learning</h6>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
+        <div class="row">
+            <div class="col-12">
+                <div class="title-banner">
+                    <div class="center">
+                        <h3><span class="icon"></span>Test Your Youtube Thumnail</h3>
+                        <h6 class="thin">Score Your Youtube Thumnail based on Machine Learning</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
 
-<div class="col-12">
-<div class="box">
-<div class="inner-box">
-<div class="inner-box-content center">
-<br>
-<input type="file" id="myFile" name="filename" class="button">
+            <div class="col-12">
+                <div class="box">
+                    <div class="inner-box">
+                        <div class="inner-box-content center">
+                            <br>
+                            <input type="file" id="myFile" name="filename" class="button">
 
-</div>
-</div>
-</div>
-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</div>
-<div class="row">
-<div class="col-md-4 col-12">
-<div class="info-box">
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="info-box">
 
-<h5>Powered by Machine Learning</h5>
-<p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
-</div>
-</div>
-<div class="col-md-4 col-12">
-<div class="info-box">
+                    <h5>Powered by Machine Learning</h5>
+                    <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="info-box">
 
-<h5>The Ultimate Thumnail Tool for Youtubers</h5>
-<p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
-</div>
-</div>
-<div class="col-md-4 col-12">
-<div class="info-box">
+                    <h5>The Ultimate Thumnail Tool for Youtubers</h5>
+                    <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="info-box">
 
-<h5>Score your Thumbnail in Seconds</h5>
-<p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
-</div>
-</div>
+                    <h5>Score your Thumbnail in Seconds</h5>
+                    <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+                </div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </body>
+
 </html>
