@@ -1359,7 +1359,8 @@ body {
 
 
 .box{
-    background-color: #3d95d8;
+	/* background-color: #3d95d8; */
+    background-color: #242424;
     padding: 20px;
     height: 300px;
 }
