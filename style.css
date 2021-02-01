@@ -1385,7 +1385,7 @@ body {
 
 
 .info-box{
-    height: 200px;
+    /* height: 200px; */
     padding: 35px;
     color: #bbbbbb;
     
@@ -1459,6 +1459,9 @@ font-weight: 600;
 
 
 
+.row{
+	background-color: #2f2e33;
+}
 
 #logo{
     background-image: url(Other%2520Files/Logo-02.png);
@@ -1469,5 +1472,23 @@ font-weight: 600;
 
 
 
+#thumbnail1{
+	/* background-image: url(img/default1.jpg);
+	background-size: contain;
+	object-fit: cover; */
+	height: 100px;
+	width: 100%;
+
+}
+#thumbnail2{
+	
+	background-image: url(img/default2.jpg);
+
+}
+#thumbnail3{
+	
+	background-image: url(img/default3.jpg);
+
+}
 
 
