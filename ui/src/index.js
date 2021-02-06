@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import Header from './components/header';
+import Titlebanner  from "./components/TitleBanner";
 
 
 // ReactDOM.render(
@@ -18,6 +19,7 @@ import Header from './components/header';
 ReactDOM.render(
   <React.StrictMode>
     <Header />
+    <Titlebanner/>
   </React.StrictMode>,
   document.getElementById('root')
 );

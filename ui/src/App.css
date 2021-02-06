@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -35,4 +36,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.center{
+  margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+.thin{
+  font-weight: 300;}
+
+  .icon{
+    background-image: url(images/icon.png);
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    /* Other styles here */
+}
+
+.title-banner{
+  height: 200px;
+  padding: 30px;
+  
+}
+
+.col-12 {
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%
+}
+.title-banner-items{
+  align-self: center;
+    justify-content: center;
+    
+    margin: auto;
 }
