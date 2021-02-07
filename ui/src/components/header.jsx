@@ -2,7 +2,7 @@
 
  
 import logo from '../images/Logo/Logo-02.png';
-import '../App.css';
+import '../index.css';
 
 
  class Header extends Component {
