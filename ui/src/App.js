@@ -3,22 +3,85 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+
+<body>
+
+    
+ 
+    <div class="topnav" id="myTopnav">
+        <a href="#home">
+            <img id="logo" aria-activedescendant="" src={logo} />
         </a>
-      </header>
+        
     </div>
+
+
+
+    <div class="container app-main">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="title-banner">
+                    <div class="center">
+                        <h3><span class="icon"></span>Test Your Youtube Thumnail</h3>
+                        <h6 class="thin">Score Your Youtube Thumnail based on Machine Learning</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-12">
+                <div class="box">
+                    <div class="inner-box">
+                        <div class="inner-box-content center">
+                            <br/>
+                            <input type="file" id="myFile" name="filename" class="button" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <div class="info-box">
+
+                    <h5>Powered by Machine Learning</h5>
+                    <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="info-box">
+
+                    <h5>The Ultimate Thumnail Tool for Youtubers</h5>
+                    <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="info-box">
+
+                    <h5>Score your Thumbnail in Seconds</h5>
+                    <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+
+
+
+
+
+
+
   );
 }
 
