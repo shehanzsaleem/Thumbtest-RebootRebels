@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+import logo from './images/Logo/Logo-02.png';
 import './App.css';
-
+function sayHello() {
+    alert('You clicked me!');
+  }
 function App() {
   return (
 
@@ -12,6 +14,12 @@ function App() {
         <a href="#home">
             <img id="logo" aria-activedescendant="" src={logo} />
         </a>
+        {/* <a href="#Help">
+            <img id="logo" aria-activedescendant="" src={logo} />
+        </a> */}
+        <button id="btnHelp" onClick={sayHello}>Help</button>;
+
+
         
     </div>
 
