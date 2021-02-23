@@ -7,7 +7,7 @@ import history from './history';
 
 
 
-
+import React, { Component }  from 'react';
 
 function sayHello() {
     alert('You clicked me!');
