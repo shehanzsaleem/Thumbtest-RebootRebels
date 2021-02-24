@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class About extends Component {
-    render() {
-        return (
-            <div style={{ display: 'flex', justifyContent: 'center', padding: 30 }}>
-                <div><h2>About Page</h2></div>
-            </div>
-        );
-    }
+
+function Home(){
+    return(
+
+<div>
+    <h1>This is the about page to be designed</h1>
+</div>
+
+
+    );
+
 }
 
-export default About;
+export default Home;
