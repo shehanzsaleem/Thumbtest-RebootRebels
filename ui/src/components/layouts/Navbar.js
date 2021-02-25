@@ -1,5 +1,6 @@
 import React from "react";
 import logo from './Logo-02.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -17,16 +18,16 @@ function Navbar ()
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto mb-2 mb-lg-0 ">
         <li className="nav-item">
-          <a className="nav-link text-white text-uppercase ml-5" aria-current="page" href="#">Home&nbsp;<i class="fas fa-home"></i></a>
+          <Link className="nav-link text-white text-uppercase ml-5" aria-current="page" to="/">Home&nbsp;<i class="fas fa-home"></i></Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white text-uppercase ml-5" href="./Score/Score">Score</a>
+          <Link className="nav-link text-white text-uppercase ml-5" to="/Score">Score</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white text-uppercase ml-5" href="./About/About">About</a>
+          <Link className="nav-link text-white text-uppercase ml-5" to="/About">About</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white text-uppercase ml-5" href="./Contact/Contact">Contact</a>
+          <Link className="nav-link text-white text-uppercase ml-5" to="/Contact">Contact</Link>
         </li>
         {/* <button type="button" className="btn btn-outline-secondary mr-1">Secondary</button> */}
        
