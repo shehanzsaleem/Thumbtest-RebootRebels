@@ -2,6 +2,7 @@
 import{Route, Link} from 'react-router-dom';
 import './App.css';
 import './Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react"; 
 import Home from './Home';
 import About from './About/About';
