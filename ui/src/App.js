@@ -1,13 +1,14 @@
 
 import{Route, Link} from 'react-router-dom';
 import './App.css';
-import './Home';
+// import './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react"; 
-import Home from './Home';
-import About from './About/About';
-import Score from './Score/Score';
-import Contact from './Contact/Contact';
-import Navbar from './Navbar/Navbar';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Score from './components/pages/Score';
+import Contact from './components/pages/Contact';
+import Navbar from './components/layouts/Navbar';
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
     <div className="App">
       <Navbar/>
      <Route exact path="/" component={Home}/>
-     <Route exact path="/About/About" component={About}/>
-     <Route exact path="/Contact/Contact" component={Contact}/>
-     <Route exact path="/Score/Score" component={Score}/>
+     <Route  path="/About" component={About}/>
+     <Route  path="/Contact" component={Contact}/>
+     <Route  path="/Score" component={Score}/>
 
      
     </div>
