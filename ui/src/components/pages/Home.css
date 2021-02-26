@@ -1468,6 +1468,7 @@
       width: 20px;
       display: inline-block;
       margin-right: 10px;
+      -webkit-text-fill-color: azure;
       /* Other styles here */
   }
   

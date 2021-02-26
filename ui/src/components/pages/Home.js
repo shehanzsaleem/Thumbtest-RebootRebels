@@ -7,26 +7,26 @@ function Home(){
 
 <div>
     <body>
-<div class="container app-main">
+<div className="container app-main">
 
-<div class="row">
-    <div class="col-12">
-        <div class="title-banner">
-            <div class="center">
-                <h3><span class="icon"></span>Test Your Youtube Thumnail</h3>
-                <h6 class="thin">Score Your Youtube Thumnail based on Machine Learning</h6>
+<div className="row">
+    <div className="col-12">
+        <div className="title-banner">
+            <div className="center">
+                <h3><span className="icon"></span>Test Your Youtube Thumnail</h3>
+                <h6 className="thin">Score Your Youtube Thumnail based on Machine Learning</h6>
             </div>
         </div>
     </div>
 </div>
-<div class="row">
+<div className="row">
 
-    <div class="col-12">
-        <div class="box">
-            <div class="inner-box">
-                <div class="inner-box-content center">
+    <div className="col-12">
+        <div className="box">
+            <div className="inner-box">
+                <div className="inner-box-content center">
                     <br/>
-                    <input type="file" id="myFile" name="filename" class="button" />
+                    <input type="file" id="myFile" name="filename" className="button" />
 
                 </div>
             </div>
@@ -34,30 +34,30 @@ function Home(){
     </div>
 
 </div>
-<div class="row">
-    <div class="col-md-4 col-12">
-        <div class="info-box">
+{/* <div className="row">
+    <div className="col-md-4 col-12">
+        <div className="info-box">
 
             <h5>Powered by Machine Learning</h5>
-            <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+            <p className="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
         </div>
     </div>
-    <div class="col-md-4 col-12">
-        <div class="info-box">
+    <div className="col-md-4 col-12">
+        <div className="info-box">
 
             <h5>The Ultimate Thumnail Tool for Youtubers</h5>
-            <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+            <p className="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
         </div>
     </div>
-    <div class="col-md-4 col-12">
-        <div class="info-box">
+    <div className="col-md-4 col-12">
+        <div className="info-box">
 
             <h5>Score your Thumbnail in Seconds</h5>
-            <p class="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
+            <p className="small thin">Score Your Youtube Thumnail based on Machine Learning</p>
         </div>
     </div>
 
-</div>
+</div> */}
 
 </div>
 
