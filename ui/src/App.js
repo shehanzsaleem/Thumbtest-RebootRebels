@@ -14,10 +14,10 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-     <Route exact path="/" component={Home}/>
+     <Route exact path="/" component={Score}/>
      <Route  path="/About" component={About}/>
      <Route  path="/Contact" component={Contact}/>
-     <Route  path="/Score" component={Score}/>
+     <Route  path="/Home" component={Home}/>
 
      
     </div>

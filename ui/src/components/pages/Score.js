@@ -1,12 +1,18 @@
-import React from "react";
+import React from 'react';
+import HeroSection from './HeroSection';
+import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from './Data';
 
 
 function Score(){
     return(
 
-<div>
-    <h1>This the page where the Scores are displayed (To be designed soon)</h1>
-</div>
+<>
+      <HeroSection {...homeObjOne} />
+      <HeroSection {...homeObjThree} />
+      <HeroSection {...homeObjTwo} />
+      {/* <Pricing /> */}
+      <HeroSection {...homeObjFour} />
+    </>
 
 
     );
