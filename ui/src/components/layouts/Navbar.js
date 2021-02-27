@@ -21,7 +21,7 @@ function Navbar ()
           <Link className="nav-link text-white text-uppercase ml-5" aria-current="page" to="/">Home&nbsp;<i class="fas fa-home"></i></Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white text-uppercase ml-5" to="/Score">Score</Link>
+          <Link className="nav-link text-white text-uppercase ml-5" to="/Home">Score</Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link text-white text-uppercase ml-5" to="/About">About</Link>
