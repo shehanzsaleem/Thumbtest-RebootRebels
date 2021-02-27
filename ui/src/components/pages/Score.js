@@ -11,7 +11,7 @@ function Score(){
       <HeroSection {...homeObjThree} />
       <HeroSection {...homeObjTwo} />
       {/* <Pricing /> */}
-      <HeroSection {...homeObjFour} />
+      {/* <HeroSection {...homeObjFour} /> */}
     </>
 
 
