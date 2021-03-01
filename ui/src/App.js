@@ -19,7 +19,7 @@ function App() {
 
     
 
-<body>
+{/* <body>
 
     
  
@@ -27,9 +27,9 @@ function App() {
         <a href="#home">
             <img id="logo" aria-activedescendant="" src={logo} />
         </a>
-        {/* <a href="#Help">
+        { <a href="#Help">
             <img id="logo" aria-activedescendant="" src={logo} />
-        </a> */}
+        </a> }
         <button id="btnHelp" onClick={() => history.push('/Products')}>About</button>;
 
 
@@ -94,7 +94,7 @@ function App() {
 
     <Routes />
 
-</body>
+</body> */}
 
 
 
