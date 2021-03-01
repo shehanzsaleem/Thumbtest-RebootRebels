@@ -1,10 +1,20 @@
+
+
+
+
 .home__hero-section {
     color: #fff;
     padding: 160px 0;
+    /* margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%; */
   }
   
   .home__hero-row {
     align-items: center;
+    padding-top: 5%;
+    background-color:#343a40;
   }
   
   .row {
@@ -50,11 +60,11 @@
   }
   
   .dark {
-    color: #1c2237;
+    color: #000000;
   }
   
   .darkBg {
-    background-color: #1a2238;
+    background-color: #1c2237;
   }
   
   .home__hero-subtitle {
