@@ -25,7 +25,7 @@ function score() {
                 </div> */}
                 <h3>Second </h3>
                 <h4>76.80%</h4>
-                <img className="score_second" src="./sample_thumbnail_01"/>
+                <img className="score_second" /*src="./sample_thumbnail_01"*//>
                 {/* <p>per month</p>
                 <ul className='score__container-features'>
                   <li>100 Transactions</li>
@@ -44,7 +44,7 @@ function score() {
                 </div> */}
                 <h3>Best</h3>
                 <h4>95.00%</h4>
-                <img className="score_best" src="./sample_thumbnail_01"/>
+                <img className="score_best" /*src="./sample_thumbnail_01"*//>
                 {/* <p>per month</p>
                 <ul className='score__container-features'>
                   <li>1000 Transactions</li>
@@ -64,7 +64,7 @@ function score() {
                 <h3>Third</h3>
                 
                 <h4>80.08%</h4>
-                <img className="score_third" src="./sample_thumbnail_01"/>
+                <img className="score_third" /*src="./sample_thumbnail_01"*//>
                 {/* <div className="score_third"></div> */}
                 {/* <p>per month</p>
                 <ul className='score__container-features'>
