@@ -44,18 +44,24 @@
   }
   
 .score_third{
+  background:url(sample_thumbnail_01.jpg) ;
     width: 400px;
     height: 300px;
 }
 
 .score_second{
+
+  background:url(sample_thumbnail_01.jpg) ;
     width: 400px;
     height: 300px;
 }
 
 .score_best{
+    background:url(sample_thumbnail_01.jpg) ;
     width: 400px;
     height: 300px;
+   /* max-width: 300px;
+    max-height: 310px;*/
 }
 
 
