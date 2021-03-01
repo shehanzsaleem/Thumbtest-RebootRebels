@@ -22,7 +22,7 @@ export const homeObjOne = {
       'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla...',
     buttonLabel: 'Learn More',
     imgStart: '',
-    img: 'images/svg-13.svg',
+    img: 'images/svg-14.svg',
     alt: 'Vault'
   };
   
@@ -36,7 +36,7 @@ export const homeObjOne = {
       "Get everything set up and scored less than 1 minute. All you need to do is upload your 3 thumbnails and you're ready to go.",
     buttonLabel: 'Start Now',
     imgStart: 'start',
-    img: 'images/svg-12.svg',
+    img: 'images/svg-13.svg',
     alt: 'Vault'
   };
   

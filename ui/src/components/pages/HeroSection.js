@@ -25,7 +25,9 @@ function HeroSection({
             className='row home__hero-row'
             style={{
               display: 'flex',
-              flexDirection: imgStart === 'start' ? 'row-reverse' : 'row'
+              flexDirection: imgStart === 'start' ? 'row-reverse' : 'row',
+              
+              
             }}
           >
             <div className='col'>
@@ -44,8 +46,9 @@ function HeroSection({
                 >
                   {description}
                 </p>
-                <Link to='./'>
-                <button type="button" className="btn btn-outline-secondary ml-center">Log In</button>
+                <Link to='./Home'>
+                <button type="button" className="btn btn-outline-secondary ml-center">Begin</button>
+                
 
                 {/* <Button variant="outline-info">Info</Button>{' '} */}
                   {/* <Button buttonSize='btn--wide' buttonColor='blue'>
