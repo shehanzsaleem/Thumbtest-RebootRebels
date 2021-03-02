@@ -1,5 +1,5 @@
 {
-  "name": "tfjs-tuberculosis",
+  "name": "thumbtest",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -8,17 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SaschaDittmann/tfjs-tuberculosis.git"
+    "url": "git+https://github.com/shehanzsaleem/Thumbtest-RebootRebels"
   },
-  "author": "Sascha Dittmann",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SaschaDittmann/tfjs-tuberculosis/issues"
-  },
-  "homepage": "https://github.com/SaschaDittmann/tfjs-tuberculosis#readme",
+  "author": "Shehan Saleem",
   "dependencies": {
     "express": "^4.17.1"
   },
   "devDependencies": {},
-  "description": "Use the power of Machine Learning to diagnose TB from chest x-rays."
+  "description": "Check the Quality of your Thumbnails with machine learning!"
 }

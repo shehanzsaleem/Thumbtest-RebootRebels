@@ -26,15 +26,15 @@ function loadImages(dataDir) {
       .expandDims();
     images.push(imageTensor);
 
-    var hasTuberculosis = files[i].toLocaleLowerCase().endsWith("_1.jpg");
-    labels.push(hasTuberculosis ? 1 : 0);
+    var hasHighQualityThumbnail = files[i].toLocaleLowerCase().endsWith("_1.jpg");
+    labels.push(hasHighQualityThumbnail ? 1 : 0);
   }
 
   return [images, labels];
 }
 
 /** Helper class to handle loading training and test data. */
-class TuberculosisDataset {
+class HighQualityThumbnailDataset {
   constructor() {
     this.trainData = [];
     this.testData = [];
@@ -63,4 +63,4 @@ class TuberculosisDataset {
   }
 }
 
-module.exports = new TuberculosisDataset();
+module.exports = new HighQualityThumbnailDataset();

@@ -1,7 +1,7 @@
 {
   "name": "train",
   "version": "1.0.0",
-  "description": "Use the power of Machine Learning to diagnose TB from chest x-rays.",
+  "description": "Check the Quality of your Thumbnails with machine learning!",
   "main": "main.js",
   "engines": {
     "node": ">=8.11.0"
@@ -11,14 +11,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SaschaDittmann/tfjs-tuberculosis.git"
-  },
-  "author": "Sascha Dittmann",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SaschaDittmann/tfjs-tuberculosis/issues"
-  },
-  "homepage": "https://github.com/SaschaDittmann/tfjs-tuberculosis#readme",
+    "url": "git+https://github.com/shehanzsaleem/Thumbtest-RebootRebels"
+  }, 
   "dependencies": {
     "@tensorflow/tfjs-node": "^3.2.0",
     "@tensorflow/tfjs-node-gpu": "1.2.7"
