@@ -1,4 +1,4 @@
-$("#image-selector").change(function () {
+$("#image-selector").change(function () {  //Selecting the Image Function
 	let reader = new FileReader();
 	reader.onload = function () {
 		let dataURL = reader.result;
@@ -10,8 +10,12 @@ $("#image-selector").change(function () {
 	reader.readAsDataURL(file);
 });
 
+
+
+
+
 let model;
-$( document ).ready(async function () {
+$( document ).ready(async function () { //Progress bar and Loading of the Model
 	$('.progress-bar').show();
     console.log( "Loading model..." );
     model = await tf.loadLayersModel('model/model.json');
@@ -19,12 +23,16 @@ $( document ).ready(async function () {
 	$('.progress-bar').hide();
 });
 
+
+
+
+
 $("#predict-button").click(async function () {
 	let image = $('#selected-image').get(0);
 	
-	// Pre-process the image
+	// Pre-processing  the image
 	let tensor = tf.browser.fromPixels(image)
-		.resizeNearestNeighbor([96,96]) // change the image size here
+		.resizeNearestNeighbor([96,96]) // the image is reduced size here
 		.toFloat()
 		.div(tf.scalar(255.0))
 		.expandDims();
@@ -45,3 +53,4 @@ $("#predict-button").click(async function () {
 		$("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
 		});
 });
+
