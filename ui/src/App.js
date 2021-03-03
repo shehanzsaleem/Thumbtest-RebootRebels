@@ -16,6 +16,10 @@ import Score from './components/pages/Score';
 import Contact from './components/pages/Contact';
 import Navbar from './components/layouts/Navbar';
 
+import { ModelContext } from './components/context/model-context';
+// import Selector from './components/utils/Selector';
+import LoadingSpinner from './components/utils/LoadingSpinner';
+
 const MODEL_URL = process.env.PUBLIC_URL + '/model/';
 const LABELS_URL = MODEL_URL + 'labels.json';
 const MODEL_JSON = MODEL_URL + 'model.json';
@@ -67,7 +71,7 @@ const App = () => {
 
 
   return (
-
+    
     
     <div className="App">
       <Navbar/>
@@ -78,6 +82,7 @@ const App = () => {
 
      
     </div>
+    
   );
 }
 
