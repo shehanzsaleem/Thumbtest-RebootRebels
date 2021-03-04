@@ -1,4 +1,4 @@
-const tf = require('@tensorflow/tfjs-node');
+const tf = require('@tensorflow/tfjs-node-gpu');
 
 const fs = require('fs');
 const path = require('path');
@@ -7,10 +7,11 @@ const TRAIN_IMAGES_DIR = './data/train';
 const TEST_IMAGES_DIR = './data/test';
 
 function loadImages(dataDir) {
-  const images = [];
+
+  const images = []; 
   const labels = [];
   
-  var files = fs.readdirSync(dataDir);
+  var files = fs.readdirSync(dataDir); //Reading data Syncrounously to speed up the process
   for (let i = 0; i < files.length; i++) { 
     if (!files[i].toLocaleLowerCase().endsWith(".jpg")) {
       continue;
@@ -18,19 +19,23 @@ function loadImages(dataDir) {
 
     var filePath = path.join(dataDir, files[i]);
     
-    var buffer = fs.readFileSync(filePath);
-    var imageTensor = tf.node.decodeImage(buffer)
-      .resizeNearestNeighbor([96,96])
+    var buffer = fs.readFileSync(filePath); //Read the file into a buffer
+    var imageTensor = tf.node.decodeImage(buffer) //Converting the image into a tensor
+      .resizeNearestNeighbor([120,90]) //keep the images in the original size
       .toFloat()
       .div(tf.scalar(255.0))
-      .expandDims();
-    images.push(imageTensor);
+      .expandDims(); //Converting a d3 tenor to a d4 tensor
+    images.push(imageTensor); //Pushing the Tensor of the image to the Images array
+
+    console.log(imageTensor);
+
 
     var hasHighQualityThumbnail = files[i].toLocaleLowerCase().endsWith("_1.jpg");
     labels.push(hasHighQualityThumbnail ? 1 : 0);
   }
 
   return [images, labels];
+
 }
 
 /** Helper class to handle loading training and test data. */
