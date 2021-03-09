@@ -36,7 +36,9 @@ const App = () => {
     setLoading(false);
   }
 
+  
   return (
+    
     <ModelContext.Provider
       value={{
         model: model,
@@ -73,6 +75,7 @@ const App = () => {
           )}
       </div>
     </ModelContext.Provider>
+
   );
 }
 

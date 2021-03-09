@@ -1,13 +1,12 @@
+const { constraints } = require('@tensorflow/tfjs');
 const tf = require('@tensorflow/tfjs');
 
 const kernel_size = [3, 3]
 const pool_size= [2, 2]
 
-
 const first_filters = 32
 const second_filters = 64
 const third_filters = 128
-
 
 const dropout_conv = 0.3
 const dropout_dense = 0.3
@@ -40,6 +39,7 @@ model.add(tf.layers.conv2d({
   kernelSize: kernel_size,
   activation: 'relu',
 }));
+
 model.add(tf.layers.conv2d({
   filters: second_filters,
   kernelSize: kernel_size,
@@ -55,6 +55,7 @@ model.add(tf.layers.dropout({rate: dropout_conv}));
 
 //THIRD LAYER
 
+
 model.add(tf.layers.conv2d({
   filters: third_filters,
   kernelSize: kernel_size,
@@ -72,6 +73,7 @@ model.add(tf.layers.conv2d({
 }));
 model.add(tf.layers.maxPooling2d({poolSize: pool_size}));
 model.add(tf.layers.dropout({rate: dropout_conv}));
+
 
 
 
