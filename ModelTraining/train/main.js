@@ -1,23 +1,32 @@
-const tf = require('@tensorflow/tfjs-node');
+const tf = require('@tensorflow/tfjs-node-gpu');
 
 const data = require('./data');
 const model = require('./model');
 
 async function run(epochs, batchSize, modelSavePath) {
-  data.loadData();
+
+
+  data.loadTrainData();
 
   const {images: trainImages, labels: trainLabels} = data.getTrainData();
+
   console.log("Training Images (Shape): " + trainImages.shape);
   console.log("Training Labels (Shape): " + trainLabels.shape);
-
+  
   model.summary();
 
   const validationSplit = 0.15;
+
   await model.fit(trainImages, trainLabels, {
     epochs,
     batchSize,
     validationSplit
   });
+
+  
+  data.loadTestData();
+
+
 
   const {images: testImages, labels: testLabels} = data.getTestData();
   const evalOutput = model.evaluate(testImages, testLabels);
@@ -31,6 +40,10 @@ async function run(epochs, batchSize, modelSavePath) {
     await model.save(`file://${modelSavePath}`);
     console.log(`Saved model to path: ${modelSavePath}`);
   }
+
 }
 
-run(100, 32, './model');
+
+
+
+run(3, 32, './model');
