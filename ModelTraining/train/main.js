@@ -6,7 +6,7 @@ const model = require('./model');
 async function run(epochs, batchSize, modelSavePath) {
 
 
-  data.loadData();
+  data.loadTrainData();
 
   const {images: trainImages, labels: trainLabels} = data.getTrainData();
 
@@ -22,6 +22,9 @@ async function run(epochs, batchSize, modelSavePath) {
     batchSize,
     validationSplit
   });
+
+  
+  data.loadTestData();
 
 
 

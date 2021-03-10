@@ -17,6 +17,7 @@ function loadImages(dataDir) {
       continue;
     }
 
+    console.log(i);
     var filePath = path.join(dataDir, files[i]);
     
     var buffer = fs.readFileSync(filePath); //Read the file into a buffer
@@ -57,18 +58,26 @@ class HighQualityThumbnailDataset {
   }
 
   /** Loads training and test data. */
-  loadData() {
-    console.log('Loading images...');
+  loadTrainData() {
+    console.log('Loading Training images...');
     this.trainData = loadImages(TRAIN_IMAGES_DIR);
-    this.testData = loadImages(TEST_IMAGES_DIR);
-    console.log('Images loaded successfully.')
+    console.log('Training Images loaded successfully.')
   }
 
+  loadTestData() {
+    console.log('Loading Test images...');
+    this.testData = loadImages(TEST_IMAGES_DIR);
+    console.log('Testing Images loaded successfully.')
+  }
+
+
   getTrainData() {
+
     return {
       images: tf.concat(this.trainData[0]),
       labels: tf.oneHot(tf.tensor1d(this.trainData[1], 'int32'), 2).toFloat()
     }
+    
   }
 
   getTestData() {
