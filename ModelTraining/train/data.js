@@ -17,6 +17,7 @@ function loadImages(dataDir) {
       continue;
     }
 
+    console.log(i);
     
     var filePath = path.join(dataDir, files[i]);
     
