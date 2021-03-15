@@ -10,7 +10,7 @@ function Score(){
       <HeroSection {...homeObjOne} />
       <HeroSection {...homeObjThree} />
       <HeroSection {...homeObjTwo} />
-      {/* <Pricing /> */}
+      
       {/* <HeroSection {...homeObjFour} /> */}
     </>
 
