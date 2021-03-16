@@ -1,18 +1,81 @@
 import React from "react";
-// import './Contact.css';
-import car from './backgroundimage01.jpg';
-
+import './Contact.css';
+//import 'bootstrap/dist/css/bootstrap.css';
+//import { Link } from 'react-router-dom'
 
 function Contact(){
     return(
-<body>
-<div className="contact" style={{ backgroundImage: 'url(${car}) ', width: 'auto', height:'2000px' }}>
-    <h1>This is the Contact us page to be designed</h1>
-</div>
 
-</body>
+     
+    <body>
+        <div className='contactUs'>   
+        <section className='contact'>
+            <div className='content'>
+                <h2>Get in touch with us</h2>
+                <p>We'd love to help you start exceeding your CX goals. bla.. bla... </p>
+            </div>
+
+            <div className='container'>
+                <div className='contactInfo'>
+                    <div className='contactBox'>
+                        <div class='icon'><i class="fa fa-phone" aria-hidden="true"></i></div>
+                        <div className='contactText'>
+                            <h3>Phone</h3>
+                            <p>+94-77-205-5372<br></br>
+                                +94-77-205-5372
+                            </p>
+                        </div>     
+                    </div>    
+                    <div className='contactBox'>
+                        <div className='icon'><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                        <div className='contactText'>  
+                            <h3>Email</h3>
+                            <p>tumbtest@gmail.com</p>
+                        </div>         
+                    </div>    
+                </div>
+
+                <div className='contactForm'>
+                <form>
+                    <h2>Send Massage</h2>
+
+                    <div className='inputBox'>
+                        <input type='text' name='' required='required'></input>
+                        <span>Full Name</span>
+                    </div>
+
+                    <div className='inputBox'>
+                        <input type='text' name='' required='required'></input>
+                        <span>Email</span>
+                    </div>
+
+                    <div className='inputBox'>
+                        <textarea required='required'></textarea>
+                        <span>Type our Message...</span>
+                    </div>
+
+                    <div className='inputBox'>
+                        <input type='submit' name='' value='Send'></input>
+                    </div>
+
+                </form>
+            </div>  
+
+            </div>  
+
+            
+
+
+        </section>
+        </div>
+    </body>
+
+
+
+
     );
 
 }
 
 export default Contact;
+

@@ -3,12 +3,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #ffffff;
+    background: #1c2237;
   }
   
   .score__container-card {
-    background: linear-gradient(45deg, #0660e9 0%, #276afb 100%);
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
+    background: linear-gradient(45deg, #01388b 0%, #01388b 100%);
+    box-shadow: 0 6px 20px rgba(134, 153, 189, 0.2);
     width: 470px;
     height: 500px;
     text-decoration: none;
@@ -17,7 +17,7 @@
   
   .score__container-card:nth-child(2) {
     transform: scale(1.05);
-    background: #242424;
+    background: #350000;
   }
   
   /* .score__container-card:hover {
@@ -44,23 +44,29 @@
   }
   
 .score_third{
+  background:url(sample_thumbnail_01.jpg) ;
     width: 400px;
     height: 300px;
 }
 
 .score_second{
+
+  background:url(sample_thumbnail_01.jpg) ;
     width: 400px;
     height: 300px;
 }
 
 .score_best{
+    background:url(sample_thumbnail_01.jpg) ;
     width: 400px;
     height: 300px;
+   /* max-width: 300px;
+    max-height: 310px;*/
 }
 
 
   .score__heading {
-    color: #1c2237;
+    color: #ffffff;
     margin-bottom: 24px;
   }
   
