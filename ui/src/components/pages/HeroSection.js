@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-function HeroSection({ lightBg, topLine, lightText, lightTextDesc, headline, description, buttonLabel, img, img_background, alt, imgStart }
-) {
+function HeroSection({
+lightBg,
+topLine,
+lightText,
+lightTextDesc,
+headline,
+description,
+buttonLabel,
+img,
+alt,
+imgStart })
 
-
-
-
-
-
-
-
-
-
-
-
-
+{
 
   return (
     <div className={lightBg ? 'home__hero-section' : 'home__hero-section darkBg'} >
       <div className='container'>
 
-        <div className='row home__hero-row' style={{ display: 'flex', flexDirection: imgStart === 'start' ? 'row-reverse' : 'row', }} >
+        <div className='row home__hero-row' style={{ display: 'flex',
+flexDirection: imgStart === 'start' ? 'row-reverse' : 'row',
+}} >
 
           <div className='col'>
             <div className='home__hero-text-wrapper'>
@@ -34,21 +34,20 @@ function HeroSection({ lightBg, topLine, lightText, lightTextDesc, headline, des
               </p>
               <Link to='./Home'>
                 <button type="button" className="btn btn-outline-secondary ml-center">Begin</button>
-                <button variant="outline-info">Info</button>{' '}
-                <button buttonSize='btn--wide' buttonColor='blue'> {buttonLabel}
-                </button>
+                {/* <button variant="outline-info">Info</button>{' '} */}
+                {/* <button buttonSize='btn--wide' buttonColor='blue'> {buttonLabel}
+                </button> */}
               </Link>
             </div>
           </div>
 
           <div className='col'>
-            <div className='home__hero-img-wrapper' style={img_background}>
-              <img src={img}
+            <div className='home__hero-img-wrapper' >
+              {/* <img src={img}
                 alt={alt}
-                height="400px" className='home__hero-img' />
+                height="400px" className='home__hero-img' /> */}
             </div>
           </div>
-
         </div>
       </div>
     </div>

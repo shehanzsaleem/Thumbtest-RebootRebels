@@ -9,7 +9,6 @@ export const homeObjOne = {
     buttonLabel: 'Get Started',
     imgStart: '',
     img: 'svg-11.svg',
-    // img_background: 'background : url(images/svg-11.svg)',
     alt: 'Credit Card'
   };
   
