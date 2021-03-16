@@ -6,17 +6,10 @@ import * as tf from '@tensorflow/tfjs';
 
 // let model;
 
-
-
 const TARGET_CLASSES = {
     0: "Badness",
     1: "Goodness"
 };
-
-
-
-
-
 
 let modeljson;
 $(document).ready(async function () { //Progress bar and Loading of the Model
@@ -26,10 +19,6 @@ $(document).ready(async function () { //Progress bar and Loading of the Model
     console.log("Model loaded.");
     $('.progress-bar').hide();
 });
-
- 
-
-
 
 function model() {
     return (
@@ -50,8 +39,6 @@ function model() {
 
                     <input id='image-selector' className='form-control border-0' type='file' onChange={
                         
-
-
                         function () {  //Selecting the Image Function
 
                             console.log("Images Selected...");
@@ -70,12 +57,6 @@ function model() {
                         
                         }
 
-// 
-                        // (event) => this.handleChange(event) 
-                        
-                        
-                        
-                        
                         }  multiple />
 
 
@@ -120,18 +101,6 @@ function model() {
                                 $("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
                             });
                         }
-
-
-
-
-
-
-
-
-
-
-
-
 
                     } className='btn btn-primary float-right'>Check Score</button>
 
