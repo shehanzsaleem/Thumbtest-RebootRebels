@@ -100,20 +100,22 @@ html body {
 }
 
 .score_third {
-  /* background:url(/public/images/sample_thumbnail_01.jpg) ; */
+  background:url(images/sample_thumbnail_01.jpg) ;
   width: 400px;
   height: 300px;
 }
 
 .score_second {
 
-  /* background:url(/public/images/sample_thumbnail_02.jpg) ; */
+
+  background:url(images/sample_thumbnail_02.jpg) ;
   width: 400px;
   height: 300px;
 }
 
 .score_best {
-  /* background:url(/public/images/sample_thumbnail_03.jpg) ; */
+
+  background:url(images/sample_thumbnail_03.jpg) ;
   width: 400px;
   height: 300px;
   /* max-width: 300px;
@@ -335,8 +337,8 @@ img {
 .contactUs {
   width: 100%;
   height: 100%;
-  /* background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../images/contact.jpg");/*consisting of a progressive transition between two colors along a straight line of the image*/
-  /*	height: 110vh;*/
+  background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("images/contact.jpg");/*consisting of a progressive transition between two colors along a straight line of the image */
+  	 height: 110vh; 
   background-size: cover;
   background-position: center;
 }
@@ -511,7 +513,7 @@ img {
 
 .image {
   background: #00bcd4;
-  /* background: url(/public/images/tree.png) center/cover no-repeat; */
+  background: url(images/tree.png) center/cover no-repeat;
 }
 
 .contentAbout {

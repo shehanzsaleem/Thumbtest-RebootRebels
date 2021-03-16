@@ -8,7 +8,7 @@ export const homeObjOne = {
       'Get rated your thumbnails for a better viewcount. Upload upto three Thumbnails and let us to choose the better one  ',
     buttonLabel: 'Get Started',
     imgStart: '',
-    img: 'images/svg-11.svg',
+    img: 'components/pages/svg-11.svg',
     alt: 'Credit Card'
   };
   
