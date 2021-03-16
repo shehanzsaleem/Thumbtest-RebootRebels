@@ -1,26 +1,22 @@
 import React from 'react';
-// import { Button } from './Button';
-// import './score.css';
-// import { FaFire } from 'react-icons/fa';
-// import { BsXDiamondFill } from 'react-icons/bs';
-// import { GiCrystalize } from 'react-icons/gi';
-// import { IconContext } from 'react-icons/lib';
-import { Link } from 'react-router-dom';
- 
+import HeroSection from '../layouts/HeroSection';
+import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from '../data/Data-Home';
 
 
-function score() {
-  return (
+function Home(){
+    return(
 
-    // <IconContext.Provider value={{ color: '#fff', size: 64 }}>
-    
-    <div>
+<>
+      <HeroSection {...homeObjOne} />
+      <HeroSection {...homeObjThree} />
+      <HeroSection {...homeObjTwo} />
+      
+      {/* <HeroSection {...homeObjFour} /> */}
+    </>
 
-    </div>
 
-    
-  );
+    );
+
 }
 
-
-export default score;
+export default Home;

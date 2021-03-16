@@ -103,8 +103,6 @@ html body {
 }
 
 .score_second {
-
-
   background: url(images/sample_thumbnail_02.jpg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -113,14 +111,12 @@ html body {
 }
 
 .score_best {
-
   background: url(images/sample_thumbnail_03.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 400px;
   height: 300px;
 }
-
 
 .score__heading {
   color: #ffffff;
@@ -200,10 +196,6 @@ html body {
   }
 }
 
-
-
-
-
 .home__hero-section {
   color: #fff;
   padding: 50px 0;
@@ -218,7 +210,6 @@ html body {
   padding-top: 5%;
   background-color: #343a40;
   min-width: 560px;
-
 }
 
 .row {
@@ -237,7 +228,6 @@ html body {
   flex: 1;
   max-width: 50%;
   flex-basis: 50%;
-
 }
 
 .home__hero-text-wrapper {
@@ -294,8 +284,6 @@ html body {
   margin-right: 100px;
   margin-left: 50px;
   padding-right: 0;
-
-
 }
 
 .align_hero {
@@ -375,7 +363,6 @@ img {
   display: flex;
   flex-direction: column;
   margin-left: 50px;
-
 }
 
 .container .contactInfo .contactBox {
@@ -475,7 +462,6 @@ img {
     padding: 50px;
   }
 
-
   .container .contactInfo {
     margin-bottom: 40px;
   }
@@ -485,8 +471,6 @@ img {
     width: 100%;
   }
 }
-
-
 
 * {
   margin: 0;
@@ -570,7 +554,6 @@ img {
 }
 
 @media(max-width: 992px) {
-
   .about {
     grid-template-columns: 1fr;
     width: 100%;
@@ -579,7 +562,6 @@ img {
   .image {
     height: 100vh;
     display: none;
-
   }
 
   .contentAbout {
@@ -593,7 +575,6 @@ img {
 
   .contentAbout span {
     margin: 20px 0;
-
   }
 
   .contentAbout p {
@@ -603,5 +584,4 @@ img {
   .icons li i {
     font-size: 15px;
   }
-
 }

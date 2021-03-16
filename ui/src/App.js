@@ -13,7 +13,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-import Score from './components/pages/Score';
+import Score from './components/pages/Home';
 import Contact from './components/pages/Contact';
 
 import Model from './components/pages/Model';
@@ -69,10 +69,9 @@ const App = () => {
     
     <div className="App">
       <Navbar/>
-     <Route exact path="/" component={Score}/>
+     <Route exact path="/" component={Home}/>
      <Route  path="/About" component={About}/>
      <Route  path="/Contact" component={Contact}/>
-     <Route  path="/Home" component={Home}/>
      <Route  path="/Model" component={Model}/>
      
      
