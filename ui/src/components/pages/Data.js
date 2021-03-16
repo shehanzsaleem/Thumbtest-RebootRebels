@@ -8,7 +8,8 @@ export const homeObjOne = {
       'Get rated your thumbnails for a better viewcount. Upload upto three Thumbnails and let us to choose the better one  ',
     buttonLabel: 'Get Started',
     imgStart: '',
-    img: 'components/pages/svg-11.svg',
+    img: 'svg-11.svg',
+    // img_background: 'background : url(images/svg-11.svg)',
     alt: 'Credit Card'
   };
   
@@ -19,10 +20,10 @@ export const homeObjOne = {
     topLine: 'You wanna know?',
     headline: 'How it really works ? ',
     description:
-      'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla...',
+      'bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla...',
     buttonLabel: 'Learn More',
     imgStart: '',
-    img: 'images/svg-14.svg',
+    img: '/components/pages/svg-14.svg',
     alt: 'Vault'
   };
   

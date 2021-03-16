@@ -6,7 +6,8 @@ import * as tf from '@tensorflow/tfjs';
 import {loadGraphModel} from '@tensorflow/tfjs-converter';
 
 
-import './App.css';
+// import './App.css';
+
 // import './components/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
