@@ -14,6 +14,9 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Score from './components/pages/Score';
 import Contact from './components/pages/Contact';
+
+import Model from './components/pages/Model';
+
 import Navbar from './components/layouts/Navbar';
 // import Predict from './static/predict.js';
 // import predict from './components/pages/predict';
@@ -69,6 +72,7 @@ const App = () => {
      <Route  path="/About" component={About}/>
      <Route  path="/Contact" component={Contact}/>
      <Route  path="/Home" component={Home}/>
+     <Route  path="/Model" component={Model}/>
      
      
      {/* <Route path ="/predict" component={predict}/> */}

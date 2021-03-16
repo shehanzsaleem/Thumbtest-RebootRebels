@@ -6,7 +6,7 @@ import React from 'react';
 // import { GiCrystalize } from 'react-icons/gi';
 // import { IconContext } from 'react-icons/lib';
 import { Link } from 'react-router-dom';
-import './Home.css';
+ 
 
 
 function score() {
@@ -84,4 +84,6 @@ function score() {
     
   );
 }
+
+
 export default score;
