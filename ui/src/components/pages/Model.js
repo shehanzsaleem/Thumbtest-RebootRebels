@@ -3,6 +3,17 @@ import React from 'react';
 import $ from 'jquery';
 import * as tf from '@tensorflow/tfjs';
 // let model; 
+
+import { FaFire } from 'react-icons/fa';
+
+import { BsXDiamondFill } from 'react-icons/bs';
+
+
+import { GiCrystalize } from 'react-icons/gi';
+
+
+
+
 const TARGET_CLASSES = {
     0: "Badness",
     1: "Goodness"
@@ -56,8 +67,6 @@ function model() {
                         async function (e) {
 
 
-
-
                             if (Array.from(e.target.files).length > MAX_LENGTH) {
                                 e.preventDefault();
                                 alert(`Cannot upload files more than ${MAX_LENGTH}`);
@@ -65,15 +74,42 @@ function model() {
                             }
                             else{
 
+
+
                             console.log("Images Selected...");
-                            let reader = new FileReader();
-                            reader.onload = function () {
-                                let dataURL = reader.result;
-                                $("#selected-image").attr("src", dataURL);
-                                $("#prediction-list").empty();
+
+
+                            let reader0 = new FileReader();
+                            let file0 = $("#image-selector").prop('files')[0];
+                            reader0.readAsDataURL(file0);
+                            reader0.onload = function () {
+                                let dataURL = reader0.result;
+                                $("#selected-image0").attr("src", dataURL);
+                                $("#prediction-list0").empty();
                             }
-                            let file = $("#image-selector").prop('files')[0];
-                            reader.readAsDataURL(file);
+
+
+                            let reader1 = new FileReader();
+                            let file1 = $("#image-selector").prop('files')[1];
+                            reader1.readAsDataURL(file1);
+                            reader1.onload = function () {
+                                let dataURL = reader1.result;
+                                $("#selected-image1").attr("src", dataURL);
+                                $("#prediction-list1").empty();
+                            }
+
+
+                            let reader2 = new FileReader();
+                            let file2 = $("#image-selector").prop('files')[2];
+                            reader2.readAsDataURL(file2);
+                            reader2.onload = function () {
+                                let dataURL = reader2.result;
+                                $("#selected-image2").attr("src", dataURL);
+                                $("#prediction-list2").empty();
+                            }
+
+
+                         
 
 
                         }
@@ -99,8 +135,14 @@ function model() {
                     <button id='predict-button' onClick={
 
                         async function () {
+
                             console.log("Button Clicked...");
-                            let image = $('#selected-image').get(0);
+
+
+                            for(let i = 0; i < 3 ; i ++){
+
+                            let image = $('#selected-image'+i).get(0);
+
                             console.log("Selected Image Loaded...");
                             // Pre-processing the image
                             let tensor = tf.browser.fromPixels(image)
@@ -119,10 +161,15 @@ function model() {
                                 }).sort(function (a, b) {
                                     return b.probability - a.probability;
                                 }).slice(0, 2);
-                            $("#prediction-list").empty();
+                            $("#prediction-list"+i).empty();
                             top5.forEach(function (p) {
-                                $("#prediction-list").append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
+                                $("#prediction-list"+i).append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
                             });
+
+
+                        }
+
+
                         }
                     } className='btn btn-primary float-right'>Check Score</button>
                 </div>
@@ -131,20 +178,36 @@ function model() {
             <br />
             <br />
             <div className='row'>
-                <div className='col-12'>
-                    <h2 className='ml-3'>Thumbnail</h2>
-                    <img id='selected-image' className='ml-3' width='500' alt='' />
+            <div className='col-12'>
+                    <h2 className=' '>Thumbnail</h2>
+                    </div>
+                <div className='col-4'>
+                   
+                    {/* <img id='selected-image0' className=' ' width='500' alt='' /> */}
+                    <h2 className=' '>Score1</h2>
+                    <ol id='prediction-list0'>
+                    </ol>
+                    </div>
+                <div className='col-4'>
+                    <img id='selected-image1' className=' ' width='500' alt='' />
+                    <h2 className=' '>Score2</h2>
+                    <ol id='prediction-list1'>
+                    </ol>
+                    </div>
+                <div className='col-4'>
+                    <img id='selected-image2' className=' ' width='500' alt='' />
+                    <h2 className=' '>Score3</h2>
+                    <ol id='prediction-list2'>
+                    </ol>
                 </div>
                 <div className='col-12'>
-                    <h2 className='ml-3'>Score</h2>
-                    <ol id='prediction-list'>
-                    </ol>
+                 
                 </div>
             </div>
             <div className='row'>
                 <div className='col-12'>
 
-                    <h2 className='ml-3'>Your Scores</h2>
+                    <h2 className=' '>Your Scores</h2>
                 </div>
 
 
@@ -152,12 +215,12 @@ function model() {
                     <div className='score__container-card'>
 
                         <div className='score__container-cardInfo'>
-                            {/* <div className='icon'>
+                            <div className='icon'>
  <FaFire/>
- </div> */}
+ </div>
                             <h3>Second </h3>
                             <h4>76.80%</h4>
-                            <img className="score_second" /*src="./sample_thumbnail_01"*/ />
+                            <img id="selected-image0" className="score_second" /*src="./sample_thumbnail_01"*/ />
                             {/* <p>per month</p>
  <ul className='score__container-features'>
  <li>100 Transactions</li>
@@ -174,12 +237,12 @@ function model() {
                     <div className='score__container-card'>
 
                         <div className='score__container-cardInfo'>
-                            {/* <div className='icon'>
+                            <div className='icon'>
  <BsXDiamondFill/>
- </div> */}
+ </div>
                             <h3>Best</h3>
                             <h4>95.00%</h4>
-                            <img className="score_best" /*src="./sample_thumbnail_01"*/ />
+                            <img id="selected-image1" className="score_best" /*src="./sample_thumbnail_01"*/ />
                             {/* <p>per month</p>
  <ul className='score__container-features'>
  <li>1000 Transactions</li>
@@ -195,12 +258,12 @@ function model() {
                 <div className='col-md-4'>
                     <div className='score__container-card'>
                         <div className='score__container-cardInfo'>
-                            {/* <div className='icon'>
+                            <div className='icon'>
  <GiCrystalize/>
- </div> */}
+ </div>
                             <h3>Third</h3>
                             <h4>80.08%</h4>
-                            <img className="score_third" /*src="./sample_thumbnail_01"*/ />
+                            <img id="selected-image2" className="score_third" /*src="./sample_thumbnail_01"*/ />
                             {/* <div className="score_third">
 </div> */}
                             {/* <p>per month</p>

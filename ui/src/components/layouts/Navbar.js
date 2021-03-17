@@ -27,7 +27,10 @@ function Navbar() {
             <Link className="nav-link text-white ml-4" to="/Model">Test Thumbnail</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white ml-4" to="/About">About</Link>
+            <Link className="nav-link text-white ml-4" to="/Model">Generate Thumbnail</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-white ml-4" to="/About">How it Works</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link text-white ml-4" to="/Contact">Contact</Link>
