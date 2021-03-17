@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import bootstrap from 'bootstrap';
 
-
+const date = new Date();
+const nthYear = date.getFullYear();
 function Footer () {
 
 return (
 
 <div>
+    
 <footer class="bg- text-center text-white " style ={{backgroundColor:'#222021'}}>
     
     <div class="container p-3 ">
@@ -119,7 +121,11 @@ return (
     </div>
     
     <div class="text-center p-3" style={{backgroundColor :'black'}}>
-    © 2021 Copyright:
+   
+     
+    
+        
+    © {nthYear} Copyright:
     <a class="text-white" href="#!">Reboot Rebels</a>
     </div>
     
