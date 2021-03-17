@@ -19,6 +19,7 @@ import Contact from './components/pages/Contact';
 import Model from './components/pages/Model';
 
 import Navbar from './components/layouts/Navbar';
+import Footer from './components/layouts/Footer';
 // import Predict from './static/predict.js';
 // import predict from './components/pages/predict';
 
@@ -69,10 +70,13 @@ const App = () => {
     
     <div className="App">
       <Navbar/>
+      
      <Route exact path="/" component={Home}/>
      <Route  path="/About" component={About}/>
      <Route  path="/Contact" component={Contact}/>
      <Route  path="/Model" component={Model}/>
+     <br></br>
+      <Footer/>
      
      
      {/* <Route path ="/predict" component={predict}/> */}
