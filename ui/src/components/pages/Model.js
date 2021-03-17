@@ -223,7 +223,7 @@ function model() {
                             <div className='icon'>
                                 <FaFire />
                             </div>
-                            <h3>Second </h3>
+                            {/* <h3>Second </h3> */}
                             <ol id='prediction-list0'>
                             </ol>
                             <h4 id='prediction-percentage0'></h4>
@@ -251,7 +251,7 @@ function model() {
                             <div className='icon'>
                                 <BsXDiamondFill />
                             </div>
-                            <h3>Best</h3>
+                            {/* <h3>Best</h3> */}
                             <ol id='prediction-list1'>
                             </ol>
 
@@ -279,7 +279,7 @@ function model() {
                             <div className='icon'>
                                 <GiCrystalize />
                             </div>
-                            <h3>Third</h3>
+                            {/* <h3>Third</h3> */}
                             <ol id='prediction-list2'>
                             </ol>
 
