@@ -82,7 +82,7 @@ html body {
 }
 
 .score__container {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
 }
@@ -94,28 +94,31 @@ html body {
   margin: 0 auto;
 }
 
-.score_third {
-  background-image: url(images/sample_thumbnail_01.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 400px;
-  height: 300px;
+
+
+.containerp {
+  max-width: 500px;
 }
 
-.score_second {
-  background: url(images/sample_thumbnail_02.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 400px;
-  height: 300px;
+.image-wrapper {
+  position: relative;
+  padding-bottom: 56.2%;
 }
 
-.score_best {
-  background: url(images/sample_thumbnail_03.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 400px;
-  height: 300px;
+.image-wrapper img {
+  /* position: fixed; */
+  overflow: hidden;
+  object-fit: fit;
+  /* width: 100%;
+  height: 100%;  */
+
+
+  /* display: block; */
+  max-width: 100%;
+  max-height: 56%;
+  width: auto;
+  height: auto;
+
 }
 
 .score__heading {
@@ -167,8 +170,8 @@ html body {
 
 @media screen and (max-width: 960px) {
   .score__container {
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -180,8 +183,8 @@ html body {
 
   .score__wrapper {
     margin: 0 30px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     align-items: center;
   }
 
@@ -213,7 +216,7 @@ html body {
 }
 
 .row {
-  display: flex;
+  /* display: flex; */
   margin-right: -15px;
   margin-bottom: -15px;
   margin-left: -15px;
@@ -336,10 +339,10 @@ img {
   position: relative;
   min-height: 100vh;
   padding: 50px 100px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   background-size: cover;
 }
 
@@ -368,13 +371,13 @@ img {
 .container .contactInfo .contactBox {
   position: relative;
   padding: 30px 0;
-  display: flex;
+  /* display: flex; */
 }
 
 .container .contactInfo .contactBox .icon {
   min-width: 60px;
   height: 60px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -383,11 +386,11 @@ img {
 }
 
 .container .contactInfo .contactBox .contactText {
-  display: flex;
+  /* display: flex; */
   margin-left: 20px;
   font-size: 16px;
   color: white;
-  flex-direction: column;
+  /* flex-direction: column; */
   font-weight: 300;
 }
 
@@ -503,9 +506,9 @@ img {
 
 .contentAbout {
   background: #fff;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 
@@ -534,7 +537,7 @@ img {
 }
 
 .icons {
-  display: flex;
+  /* display: flex; */
   padding: 15px 0;
 }
 
