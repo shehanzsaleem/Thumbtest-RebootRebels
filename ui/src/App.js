@@ -15,6 +15,8 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Score from './components/pages/Home';
 import Contact from './components/pages/Contact';
+import Video from './components/pages/Video';
+
 
 import Model from './components/pages/Model';
 
@@ -82,7 +84,7 @@ const App = () => {
      <Route  path="/About" component={About}/>
      <Route  path="/Contact" component={Contact}/>
      <Route  path="/Model" component={Model}/>
-     
+     <Route  path="/Video" component={Video}/>
 
      </body>
      
