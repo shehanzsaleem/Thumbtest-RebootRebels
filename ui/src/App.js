@@ -18,7 +18,12 @@ import Score from './components/pages/Home';
 import Contact from './components/pages/Contact';
 import Login from './components/layouts/Login';
 
+
 import Model from './components/pages/Model';
+
+
+import Video from './components/pages/Video';
+
 
 import Navbar from './components/layouts/Navbar';
 import Footer from './components/layouts/Footer';
@@ -168,6 +173,7 @@ useEffect (() =>{
      <Route  path="/About" component={About}/>
      <Route  path="/Contact" component={Contact}/>
      <Route  path="/Model" component={Model}/>
+     <Route  path="/Video" component={Video}/>
      <Route path ="/Login" component={Login} 
       email={email} 
     setEmail ={setEmail} 
