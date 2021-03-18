@@ -38,7 +38,9 @@ function Navbar() {
           {/* <button type="button" className="btn btn-outline-secondary mr-1">Secondary</button> */}
           <li class="divider-vertical"></li>
         </ul>
+        <Link className="" to="/Login">
         <button type="button" className="btn btn-outline-secondary ml-4">Log In</button>
+        </Link>
         {/* <form className="d-flex">
  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
  <button className="btn btn-outline-success" type="submit">Search</button>
