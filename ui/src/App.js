@@ -69,13 +69,23 @@ const App = () => {
     
     
     <div className="App">
+
+
       <Navbar/>
       
+      <body>
+
+    
+
+
      <Route exact path="/" component={Home}/>
      <Route  path="/About" component={About}/>
      <Route  path="/Contact" component={Contact}/>
      <Route  path="/Model" component={Model}/>
-     <br></br>
+     
+
+     </body>
+     
       <Footer/>
      
      
