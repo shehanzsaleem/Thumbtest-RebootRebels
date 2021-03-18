@@ -1,6 +1,6 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import $ from 'jquery';
+import $, { ajax } from 'jquery';
 import * as tf from '@tensorflow/tfjs';
 // let model; 
 import { FaFire } from 'react-icons/fa';
@@ -12,13 +12,36 @@ const TARGET_CLASSES = {
 };
 const MAX_LENGTH = 3;
 let modeljson;
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function model() {
     return (
         // <IconContext.Provider value={{ color: '#fff', size: 64 }}> 
         <div className='container mt-5'>
             <div className='row mb-5'>
                 <div className='col-12'>
-                    <div className='progress progress-bar progress-bar-striped progress-bar-animated mb-2'>Loading Model</div>
+                    <div id="modelprogress" className='progress progress-bar progress-bar-striped progress-bar-animated mb-2'>Loading Model</div>
+
+
                 </div>
             </div>
             <div className='row mb-5'>
@@ -65,9 +88,16 @@ function model() {
                         async function () { //Progress bar and Loading of the Model
                             $('.progress-bar').show();
                             console.log("Loading model...");
+
                             modeljson = await tf.loadLayersModel('/model/model.json');
+                            const contentLength = modeljson.headers.get('content-length');
+
+                            console.log(contentLength);
+                            // modeljson.summary();
                             console.log("Model loaded.");
-                            $('.progress-bar').hide();
+                            $('#modelprogress').hide();
+                            var downloadModel = document.getElementById("modelprogress");
+
                         }
                     }
                         className='btn btn-secondary float-right' >Download Model(8MB)</button>
