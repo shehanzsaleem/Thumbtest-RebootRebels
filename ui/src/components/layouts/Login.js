@@ -18,6 +18,18 @@ const Login = (props) => {
         passwordError
     } = props;
 
+    // const {email} = props;
+    // const {setEmail} = props;
+    // const {password} = props;
+    // const {setPassword} = props;
+    // const {handleLogin} = props;
+    // const {hasAccount} = props;
+    // const {handleSignup} = props;
+    // const {sethasAccount} = props;
+    // const {emailError} = props;
+    // const {passwordError} = props;
+
+
 
     return(
      <section className = "login" >
