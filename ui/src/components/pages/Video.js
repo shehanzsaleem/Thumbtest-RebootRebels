@@ -6,17 +6,18 @@ function Video() {
 
         <div className='container mt-5'>
 
-            <div className='row mb-5'>
-                
-                <div className='video_icon'>
+
+
+<div className='video_icon'>
+                    {/* <i class="bi bi-box-arrow-in-down"></i>*/}
 
                      <ul className='up_icons'>
                         <li>
                             <i class="bi bi-box-arrow-in-down"></i>
                         </li>
                     </ul>
-
-                    <p>
+                
+                    <p style={{textAlign:'center'}}>
                         Click the button to Choose a video.
                     </p>
                     
@@ -24,7 +25,7 @@ function Video() {
 
                 <div className='col-12'>
                     <div className='col-35'>
-                    {/* <i class="bi bi-box-arrow-in-down"></i>*/}
+                    
                         <input id='video-selector' className='form-control border-0' type='file'  onChange={
                             
                                 async function (e) {}
@@ -49,6 +50,12 @@ function Video() {
                     </div>
                 </div>
 
+
+
+
+            <div className='row mb-5'>
+                
+               
                 </div>
 
         {/*set 1*/}

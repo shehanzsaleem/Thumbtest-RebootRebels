@@ -648,14 +648,28 @@ nav {
   border-radius: 5px;
 }
 
+<<<<<<< HEAD
 {/*.video_icon.icon{
+=======
+.video_icon.icon{
+>>>>>>> 3b8ed9cb261892019ff4af27bcaa51bd55d95156
     justify-content: center;
     align-items: center;
+    
     color: white;
+<<<<<<< HEAD
 }*/}
+=======
+}
+>>>>>>> 3b8ed9cb261892019ff4af27bcaa51bd55d95156
 
 .up_icons li i{
     font-weight: 300;
+    
     color: snow;
     text-align: center;
+    /* margin-left: 30px; */
+}
+.maddataganna{
+  margin-left: 200px;
 }
