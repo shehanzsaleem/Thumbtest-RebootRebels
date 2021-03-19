@@ -638,3 +638,24 @@ nav {
   border-left: 1px solid #878787;
   border-right: 1px solid rgb(100, 100, 100);
   }
+
+.video_tumbnail-box{
+  background: linear-gradient(45deg, #6d6d6c 0%, #bdbcb9 100%);
+  box-shadow: 0 6px 20px rgba(134, 153, 189, 0.2);
+   /*width: 470px; */
+  height: 300px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/*.video_icon.icon{
+    justify-content: center;
+    align-items: center;
+    color: white;
+}*/
+
+.up_icons li i{
+    font-weight: 300;
+    color: snow;
+    text-align: center;
+}
