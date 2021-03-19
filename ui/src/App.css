@@ -649,27 +649,29 @@ nav {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 {/*.video_icon.icon{
 =======
 .video_icon.icon{
 >>>>>>> 3b8ed9cb261892019ff4af27bcaa51bd55d95156
+=======
+/*.video_icon.icon{
+>>>>>>> 183127f07f909b922f3e56c8ed2b534264395687
     justify-content: center;
     align-items: center;
-    
     color: white;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }*/}
 =======
 }
 >>>>>>> 3b8ed9cb261892019ff4af27bcaa51bd55d95156
+=======
+}*/
+>>>>>>> 183127f07f909b922f3e56c8ed2b534264395687
 
 .up_icons li i{
     font-weight: 300;
-    
     color: snow;
     text-align: center;
-    /* margin-left: 30px; */
-}
-.maddataganna{
-  margin-left: 200px;
 }
