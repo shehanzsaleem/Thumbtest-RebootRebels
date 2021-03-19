@@ -27,7 +27,7 @@ function Navbar() {
             <Link className="nav-link ml-4" to="/Model">Test Thumbnail</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link ml-4" to="/Model">Generate Thumbnail</Link>
+            <Link className="nav-link ml-4" to="/Video">Generate Thumbnail</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link ml-4" to="/About">How it Works</Link>
