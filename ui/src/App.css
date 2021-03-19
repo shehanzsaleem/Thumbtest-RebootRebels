@@ -648,14 +648,20 @@ nav {
   border-radius: 5px;
 }
 
-/*.video_icon.icon{
+.video_icon.icon{
     justify-content: center;
     align-items: center;
+    
     color: white;
-}*/
+}
 
 .up_icons li i{
     font-weight: 300;
+    
     color: snow;
     text-align: center;
+    /* margin-left: 30px; */
+}
+.maddataganna{
+  margin-left: 200px;
 }
