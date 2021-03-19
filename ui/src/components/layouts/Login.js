@@ -72,6 +72,8 @@ const Login = () => {
     const authListener = () => {
         
     console.log("auth listener");
+
+    
         fire.auth().onAuthStateChanged((user) => {
             if (user) {
                 clearInputs();

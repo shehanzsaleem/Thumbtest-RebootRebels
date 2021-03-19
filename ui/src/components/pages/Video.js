@@ -9,7 +9,7 @@ function Video() {
 
 <ul className='up_icons'>
    <li>
-       <i class="bi bi-box-arrow-in-down"></i>
+       <i className="bi bi-box-arrow-in-down"></i>
    </li>
 </ul>
 
@@ -24,7 +24,7 @@ function Video() {
 
                 <div className='col-12'>
                     <div className='col-35'>
-                    {/* <i class="bi bi-box-arrow-in-down"></i>*/}
+                    {/* <i className="bi bi-box-arrow-in-down"></i>*/}
                         <input id='video-selector' className='form-control border-0' type='file'  onChange={
                             
                                 async function (e) {}
@@ -42,7 +42,7 @@ function Video() {
                                 console.log("Button Clicked...");
                                 
                             }
-                        }class="btn btn-light  float-right btn-outline-primary">Generate Thumbnail</button>
+                        }className="btn btn-light  float-right btn-outline-primary">Generate Thumbnail</button>
 
 
 
@@ -67,7 +67,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -91,7 +91,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -113,7 +113,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -143,7 +143,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -167,7 +167,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -189,7 +189,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -221,7 +221,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -245,7 +245,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -267,7 +267,7 @@ function Video() {
                             {/*<ol id='prediction-list0'></ol> 
                             <h4 id='prediction-percentage0'></h4>*/}
 
-                            <div class="containerp">
+                            <div className="containerp">
 
                                 <div /*className='image-wrapper'*/>
                                     <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
