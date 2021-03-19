@@ -5,22 +5,22 @@ function Video() {
     return (
 
         <div className='container mt-5'>
+<div className='video_icon'>
 
+<ul className='up_icons'>
+   <li>
+       <i class="bi bi-box-arrow-in-down"></i>
+   </li>
+</ul>
+
+<p style={{textAlign:'center'}}>
+   Click the button to Choose a video.
+</p>
+
+</div>
             <div className='row mb-5'>
                 
-                <div className='video_icon'>
-
-                     <ul className='up_icons'>
-                        <li>
-                            <i class="bi bi-box-arrow-in-down"></i>
-                        </li>
-                    </ul>
-
-                    <p>
-                        Click the button to Choose a video.
-                    </p>
-                    
-                </div>
+                
 
                 <div className='col-12'>
                     <div className='col-35'>
