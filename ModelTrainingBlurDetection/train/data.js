@@ -17,7 +17,7 @@ function loadImages(dataDir) {
       continue;
     }
 
-    
+    console.log(i);
     var filePath = path.join(dataDir, files[i]);
     
     var buffer = fs.readFileSync(filePath); //Read the file into a buffer
@@ -51,15 +51,15 @@ function loadImages(dataDir) {
     var isMotionBlurred = files[i].toLocaleLowerCase().endsWith("_M.jpg");
 
     if(isDefocused){
-      labels.push("0");
+      labels.push(0);
       //labels.push("F");
     }
     else if (isMotionBlurred){
-      labels.push("1");
+      labels.push(1);
       //labels.push("M");
     }
     else{
-      labels.push("2");
+      labels.push(2);
       //labels.push("S");
     } 
   }

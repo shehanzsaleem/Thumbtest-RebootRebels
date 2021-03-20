@@ -1,22 +1,5 @@
 {
-  "name": "train",
-  "version": "1.0.0",
-  "description": "Check the Quality of your Thumbnails with machine learning!",
-  "main": "main.js",
-  "engines": {
-    "node": ">=8.11.0"
-  },
-  "scripts": {
-    "train": "node main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shehanzsaleem/Thumbtest-RebootRebels"
-  }, 
   "dependencies": {
-    "@tensorflow/tfjs-node-gpu": "^3.2.0"
-  },
-  "devDependencies": {
-    "clang-format": "~1.2.2"
+    "@tensorflow/tfjs-node": "1.2.7"
   }
 }
