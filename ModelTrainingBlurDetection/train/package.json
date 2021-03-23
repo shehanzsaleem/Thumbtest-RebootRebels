@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@tensorflow/tfjs-node": "^1.2.7"
+    "@tensorflow/tfjs": "^3.3.0",
+    "@tensorflow/tfjs-node": "^3.3.0",
+    "yarn": "^1.22.10"
   }
 }
