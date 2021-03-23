@@ -11,7 +11,7 @@ function Home(){
       <HeroSection {...homeObjThree} />
       <HeroSection {...homeObjTwo} />
       
-      {/* <HeroSection {...homeObjFour} /> */}
+      
     </>
 
 
