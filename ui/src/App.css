@@ -64,13 +64,13 @@ html body {
 }
 
 .score__container-card:nth-child(2) {
-  transform: scale(1.05);
+  transform: scale(1.01);
   background: #350000;
 }
 
 .score__container-card:hover {
-  transform: scale(1.06);
-  transition: all 0.3s ease-out;
+  transform: scale(1.01);
+  transition: all 0.1s ease-out;
   color: #1c2237;
 }
 
