@@ -361,7 +361,7 @@ img {
 .contact {
   position: relative;
   min-height: 100vh;
-  padding: 50px 100px;
+  padding: 40px 100px;
    display: flex; 
   justify-content: center;
   align-items: center;
@@ -386,7 +386,7 @@ img {
 
 .contactcontainer{
   width: 100%;
-  margin-top: 60px;
+  margin-top: 30px;
   display: flex;
   justify-content: right;
   align-items: center;
