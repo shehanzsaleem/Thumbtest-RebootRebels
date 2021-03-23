@@ -5,26 +5,26 @@ function Video() {
     return (
 
         <div className='container mt-5'>
-<div className='video_icon'>
+                <div className='video_icon'>
 
-<ul className='up_icons'>
-   <li>
-       <i className="bi bi-box-arrow-in-down"></i>
-   </li>
-</ul>
+                    <ul className='up_icons'>
+                        <li>
+                            <i class="bi bi-box-arrow-in-down"></i>
+                        </li>
+                    </ul>
 
-<p style={{textAlign:'center'}}>
-   Click the button to Choose a video.
-</p>
+                    <p style={{textAlign:'center'}}>
+                        Click the button to Choose a video.
+                    </p>
 
-</div>
+                </div>
             <div className='row mb-5'>
                 
-                
-
+            
                 <div className='col-12'>
                     <div className='col-35'>
-                    {/* <i className="bi bi-box-arrow-in-down"></i>*/}
+                    {/* <i class="bi bi-box-arrow-in-down"></i>*/}
+                    <br></br> <br></br>
                         <input id='video-selector' className='form-control border-0' type='file'  onChange={
                             
                                 async function (e) {}

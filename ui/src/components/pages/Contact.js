@@ -18,13 +18,13 @@ function Contact() {
                     <p>We'd love to help you start exceeding your CX goals. bla.. bla... </p>
                 </div>
 
-                <div className='container'>
+                <div className='contactcontainer'>
                     
-                <div className='col-6'>
+                {/*<div className='col-6'>*/}
 
                     <div className='contactInfo'>
                         <div className='contactBox'>
-                            <div class='icon'><i class="fa fa-phone" aria-hidden="true"></i></div>
+                            <div class='iconContact'><i class="fa fa-phone" aria-hidden="true"></i></div>
                             <div className='contactText'>
                                 <h3>Phone</h3>
                                 <p>+94-77-205-5372<br></br>
@@ -33,7 +33,7 @@ function Contact() {
                             </div>
                         </div>
                         <div className='contactBox'>
-                            <div className='icon'><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                            <div className='iconContact'><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
                             <div className='contactText'>
                                 <h3>Email</h3>
                                 <p>tumbtest@gmail.com</p>
@@ -41,8 +41,7 @@ function Contact() {
                         </div>
                     </div>
 
-                    </div>
-                    <div className='col-6'>
+                    {/*<div className='col-6'>*/}
 
                     <div className='contactForm'>
                         <form>
@@ -69,8 +68,11 @@ function Contact() {
 
                         </form>
                     </div>
-                    </div>
+
+                    
                 </div>
+                    {/*</div>*/}
+                {/*</div>*/}
 
 
 

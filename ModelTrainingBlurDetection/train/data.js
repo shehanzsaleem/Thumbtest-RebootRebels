@@ -1,4 +1,4 @@
-const tf = require('@tensorflow/tfjs-node-gpu');
+const tf = require('@tensorflow/tfjs-node');
 
 const fs = require('fs'); 
 const path = require('path');
@@ -17,7 +17,7 @@ function loadImages(dataDir) {
       continue;
     }
 
-    
+    console.log(i);
     var filePath = path.join(dataDir, files[i]);
     
     var buffer = fs.readFileSync(filePath); //Read the file into a buffer
@@ -41,8 +41,27 @@ function loadImages(dataDir) {
     // imageTensor.print();
 
 
-    var hasHighQualityThumbnail = files[i].toLocaleLowerCase().endsWith("_1.jpg");
-    labels.push(hasHighQualityThumbnail ? 1 : 0);
+    //F = Defocused //M = Motion-Blurred //S = Sharp
+
+    /*var hasHighQualityThumbnail = files[i].toLocaleLowerCase().endsWith("_1.jpg"); 
+    labels.push(hasHighQualityThumbnail ? 1 : 0);*/
+    
+    var isDefocused = files[i].toLocaleLowerCase().endsWith("_F.jpg");
+
+    var isMotionBlurred = files[i].toLocaleLowerCase().endsWith("_M.jpg");
+
+    if(isDefocused){
+      labels.push(0);
+      //labels.push("F");
+    }
+    else if (isMotionBlurred){
+      labels.push(1);
+      //labels.push("M");
+    }
+    else{
+      labels.push(2);
+      //labels.push("S");
+    } 
   }
 
   return [images, labels];

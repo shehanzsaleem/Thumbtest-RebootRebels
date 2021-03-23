@@ -81,7 +81,7 @@ model.add(tf.layers.flatten()); //new layer to flatten
 
 model.add(tf.layers.dense({units: 256, activation: 'relu'}));
 model.add(tf.layers.dropout({rate: dropout_dense}));
-model.add(tf.layers.dense({units: 2, activation: 'softmax'}));
+model.add(tf.layers.dense({units: 3, activation: 'softmax'}));
 
 
 const optimizer = tf.train.adam(0.0001);

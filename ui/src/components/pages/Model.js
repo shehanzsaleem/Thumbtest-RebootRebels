@@ -90,9 +90,9 @@ function model() {
                             console.log("Loading model...");
 
                             modeljson = await tf.loadLayersModel('/model/model.json');
-                            const contentLength = modeljson.headers.get('content-length');
+                            // const contentLength = modeljson.headers.get('content-length');
 
-                            console.log(contentLength);
+                            // console.log(contentLength);
                             // modeljson.summary();
                             console.log("Model loaded.");
                             $('#modelprogress').hide();
