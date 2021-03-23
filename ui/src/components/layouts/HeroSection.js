@@ -33,18 +33,12 @@ function HeroSection({
               </p>
               <Link to='./Model'>
                 <button type="button" className="btn btn-outline-secondary ml-center">Begin</button>
-                {/* <button variant="outline-info">Info</button>{' '} */}
-                {/* <button buttonSize='btn--wide' buttonColor='blue'> {buttonLabel}
-                </button> */}
               </Link>
             </div>
           </div>
 
           <div className='col'>
-            <div className='home__hero-img-wrapper' >
-              {/* <img src={img}
-                alt={alt}
-                height="400px" className='home__hero-img' /> */}
+            <div className='home__hero-img-wrapper' style={{height:'400px',marginRight:'50px'}} >
             </div>
           </div>
         </div>

@@ -102,6 +102,23 @@ const Login = () => {
     //     emailError,
     //     passwordError
     // } = props;
+import React from 'react';
+import "./Login.css";
+const Login = (props) => {
+    const {
+        email,
+        setEmail,
+        password,
+        setPassword,
+        handleLogin,
+        handleSignup,
+        hasAccount,
+        sethasAccount,
+        emailError,
+        passwordError
+    } = props;
+
+    
     // const {email} = props;
     // const {setEmail} = props;
     // const {password} = props;
@@ -151,6 +168,7 @@ const Login = () => {
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
     );
