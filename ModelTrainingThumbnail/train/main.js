@@ -1,4 +1,4 @@
-const tf = require('@tensorflow/tfjs-node-gpu');
+const tf = require('@tensorflow/tfjs-node');
 
 const data = require('./data');
 const model = require('./model');
@@ -8,11 +8,14 @@ async function run(epochs, batchSize, modelSavePath) {
 
   data.loadTrainData();
 
-  const {images: trainImages, labels: trainLabels} = data.getTrainData();
+  const {
+    images: trainImages,
+    labels: trainLabels
+  } = data.getTrainData();
 
   console.log("Training Images (Shape): " + trainImages.shape);
   console.log("Training Labels (Shape): " + trainLabels.shape);
-  
+
   model.summary();
 
   const validationSplit = 0.15;
@@ -23,18 +26,41 @@ async function run(epochs, batchSize, modelSavePath) {
     validationSplit
   });
 
-  
+
   data.loadTestData();
 
 
 
-  const {images: testImages, labels: testLabels} = data.getTestData();
+  const {
+    images: testImages,
+    labels: testLabels
+  } = data.getTestData();
+
+
   const evalOutput = model.evaluate(testImages, testLabels);
+
+
+
+  
+  // const accuracy = tf.metrics.binaryAccuracy(testImages, testLabels);
+  // console.log(accuracy);
+
+
+
+
+// accuracy.print();
 
   console.log(
       `\nEvaluation result:\n` +
       `  Loss = ${evalOutput[0].dataSync()[0].toFixed(3)}; `+
       `Accuracy = ${evalOutput[1].dataSync()[0].toFixed(3)}`);
+
+
+  console.log("Testing Metrics : "+evalOutput);
+
+
+
+
 
   if (modelSavePath != null) {
     await model.save(`file://${modelSavePath}`);
@@ -46,4 +72,4 @@ async function run(epochs, batchSize, modelSavePath) {
 
 
 
-run(3, 32, './model');
+run(1, 32, './model');
