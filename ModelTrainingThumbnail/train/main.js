@@ -41,9 +41,9 @@ async function run(epochs, batchSize, modelSavePath) {
 
 
 
-  
-  // const accuracy = tf.metrics.binaryAccuracy(testImages, testLabels);
-  // console.log(accuracy);
+
+  const accuracy = tf.metrics.binaryAccuracy(testImages, testLabels);
+  console.log(accuracy);
 
 
 
