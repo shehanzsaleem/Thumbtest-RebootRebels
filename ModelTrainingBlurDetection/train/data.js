@@ -17,7 +17,7 @@ function loadImages(dataDir) {
       continue;
     }
 
-    console.log(i);
+    // console.log(i);
     var filePath = path.join(dataDir, files[i]);
     
     var buffer = fs.readFileSync(filePath); //Read the file into a buffer
@@ -94,7 +94,7 @@ class HighQualityThumbnailDataset {
 
     return {
       images: tf.concat(this.trainData[0]),
-      labels: tf.oneHot(tf.tensor1d(this.trainData[1], 'int32'), 2).toFloat()
+      labels: tf.oneHot(tf.tensor1d(this.trainData[1], 'int32'), 3).toFloat()
     }
     
   }
@@ -102,7 +102,7 @@ class HighQualityThumbnailDataset {
   getTestData() {
     return {
       images: tf.concat(this.testData[0]),
-      labels: tf.oneHot(tf.tensor1d(this.testData[1], 'int32'), 2).toFloat()
+      labels: tf.oneHot(tf.tensor1d(this.testData[1], 'int32'), 3).toFloat()
     }
   }
 }
