@@ -18,11 +18,11 @@ async function run(epochs, batchSize, modelSavePath) {
 
   model.summary();
 
-  const surface = {
+  /*const surface = {
     name: 'Layer Summary',
     tab: 'Model Inspection'
   };
-  tfvis.show.layer(surface, model.getLayer(undefined, 1));
+  tfvis.show.layer(surface, model.getLayer(undefined, 1));*/
 
 
   const validationSplit = 0.15;
@@ -57,11 +57,11 @@ async function run(epochs, batchSize, modelSavePath) {
 }
 
 
-const summaryWriter = tf.node.summaryFileWriter('/tmp/tfjs_tb_logdir');
+//const summaryWriter = tf.node.summaryFileWriter('/tmp/tfjs_tb_logdir');
 
-for (let step = 0; step < 100; ++step) {
+/*for (let step = 0; step < 100; ++step) {
   summaryWriter.scalar('dummyValue', Math.sin(2 * Math.PI * step / 8), step);
-}
+}*/
 
 
 

@@ -77,7 +77,7 @@
     "v8_trace_maps": 0,
     "v8_use_siphash": 1,
     "want_separate_host_toolset": 0,
-    "nodedir": "C:\\Users\\User\\AppData\\Local\\node-gyp\\Cache\\14.16.0",
+    "nodedir": "C:\\Users\\Asus\\AppData\\Local\\node-gyp\\Cache\\14.16.0",
     "standalone_static_library": 1,
     "msbuild_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe",
     "bin_links": "true",
