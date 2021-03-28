@@ -1,4 +1,5 @@
 TARGET_CLASSES = {
-  0: "Badness",
-  1: "Goodness"
+  0: "Motion Blur",
+  1: "Defocus",
+  2: "Sharp"
 };
