@@ -6,6 +6,9 @@ import * as tf from '@tensorflow/tfjs';
 import { FaFire } from 'react-icons/fa';
 import { BsXDiamondFill } from 'react-icons/bs';
 import { GiCrystalize } from 'react-icons/gi';
+
+
+
 const TARGET_CLASSES = {
     0: "Badness",
     1: "Goodness"
@@ -85,6 +88,8 @@ function model() {
                 </div>
                 <div className='col-6'>
                     <button id='downloadModel' onClick={
+
+
                         async function () { //Progress bar and Loading of the Model
                             $('.progress-bar').show();
                             console.log("Loading model...");
@@ -102,6 +107,10 @@ function model() {
                     }
                         className='btn btn-secondary float-right' >Download Model(8MB)</button>
                     <button id='predict-button' onClick={
+
+
+
+
                         async function () {
                             console.log("Button Clicked...");
                             for (let i = 0; i < 3; i++) {
@@ -132,6 +141,15 @@ function model() {
                                     $("#prediction-percentage" + i).append(`${(p.probability * 100).toFixed(2)}%`);
                                 });
                             }
+
+
+
+
+
+
+
+
+
                         }
                     } className='btn btn-primary float-right'>Check Score</button>
                 </div>

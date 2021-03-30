@@ -340,12 +340,7 @@ img {
   }
 }
 
-* {/*
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-*/}
+
 
 .contactUs {
   width: 100%;
@@ -786,3 +781,12 @@ nav {
     color: snow;
     text-align: center;
 }
+
+
+.hidden{
+  display: none;
+}
+
+
+
+
