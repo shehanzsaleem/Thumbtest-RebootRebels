@@ -6,16 +6,26 @@ function About() {
         </div>*/
         <div className='container'>
             <div className='row mt-5 mb-5'>
+
                 <div className='col-6'>
-                    <div className='image'>
-                    </div>
+
+                    {/* <div className='image'>
+                    </div> */}
+
                 </div>
+
                 <div className='col-6'>
+
+                    <button className="btn btn-primary btn">
+                        Test Accuracy
+                    </button>
+
                     <div className='contentAbout'>
                         <h2>About</h2>
-                      
+
                         <p>bla.... bla....</p>
-                        <ul className='icons'>
+
+                        {/* <ul className='icons'>
                             <li>
                                 <i class="fa fa-github" aria-hidden="true">
                                 </i>
@@ -32,7 +42,8 @@ function About() {
                                 <i class="fa fa-twitter" aria-hidden="true">
                                 </i>
                             </li>
-                        </ul>
+                        </ul> */}
+
                     </div>
                 </div>
             </div>
