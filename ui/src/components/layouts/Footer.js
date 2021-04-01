@@ -6,6 +6,9 @@ const date = new Date();
 const nthYear = date.getFullYear();
 function Footer() {
     return (
+        <footer>
+
+      
         <div class="bg-dark    footer text-white " style={{ backgroundColor: '#222021' }}>
             <div class="container-fluid p-3 ">
                 <section class="text-center mb-4 pt-1">
@@ -46,36 +49,81 @@ function Footer() {
                 </section>
                 <section class="">
                     <div class="row">
-                        <div class="col-lg-6 col-md-12 mb-4 mt-4 mb-md-4">
+                        <div class="col-lg-5 col-md-10 mb-4 mt-4 mb-md-4">
                             <img src={logo} alt="logo" style={{ width: '150px' }} />
                             <p className='ml-1 mt-3'>
                                 The Ultimate Thumnail Tool for Youtubers
                                </p>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 mt-4 mb-md-4">
-                            <h5 class="text-uppercase">Upcomming Tools</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li>
-                                    <a href="#!" class="text-white">Thumbnail Generator from Video</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Advertisment CTR Predictor</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Title Optimizer</a>
-                                </li>
-                                <li>
-                                    <a href="#!" class="text-white">Comment Analiser</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 mt-4 mb-md-4">
-                            <h5 class="text-uppercase">About Us</h5>
+                            <hr />
                             <p className='small'>
                                 Powered by Machine Learning
                                 Score Your Youtube Thumnail based on Machine Learning
                                 Score your Thumbnail in Seconds
                                 </p>
+
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mt-4 mb-md-4">
+
+                            <h5 class="text-uppercase">Thumbnail Testing Tools</h5>
+                            <ul class="list-unstyled mb-0">
+
+
+
+
+                                <li>
+                                    <a href="#!" class="text-white">Test Your Thumbnail</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Test Thumbnail Accuracy</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Unit Test Thumbnail Accuracy</a>
+                                </li>
+
+                                <li>
+                                    <a href="#!" class="text-white">Comment Analiser</a>
+                                </li>
+
+
+
+
+
+
+
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 mt-4 mb-md-4">
+
+                            <h5 class="text-uppercase">New Features</h5>
+                            <ul class="list-unstyled mb-0">
+
+
+
+
+                                <li>
+                                    <a href="#!" class="text-white">Generate Thumbnail from Video</a>
+                                </li>
+
+                                <li>
+                                    <a href="#!" class="text-white">Test Thumbnail Accuracy</a>
+                                </li>
+
+                                <li>
+                                    <a href="#!" class="text-white">Unit Test Thumbnail Accuracy</a>
+                                </li>
+
+
+                                <li>
+                                    <a href="#!" class="text-white">Comment Analiser</a>
+                                </li>
+
+
+
+
+
+
+
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -85,6 +133,8 @@ function Footer() {
  <a class="text-white" href="#!"> Reboot Rebels</a>
             </div>
         </div>
+  
+        </footer>
     )
 }
 export default Footer;
