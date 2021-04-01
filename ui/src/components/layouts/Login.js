@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import "./Login.css";
 import fire from './fire';
 
 
