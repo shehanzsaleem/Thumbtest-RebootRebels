@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+    
+    <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-fixed-top">
 
       <img src={logo} alt="logo" style={{ width: '150px' }} />
 
@@ -46,9 +47,7 @@ function Navbar() {
  <button className="btn btn-outline-success" type="submit">Search</button>
  </form> */}
       </div>
-
     </nav>
-
 
   );
 

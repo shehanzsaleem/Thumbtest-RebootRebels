@@ -7,7 +7,7 @@ function Contact() {
     return (
 
 
-        <div className='contactUs'>
+     
 
 
             <section className='contact'>
@@ -20,7 +20,7 @@ function Contact() {
 
                 <div className='contactcontainer'>
                     
-                {/*<div className='col-6'>*/}
+                
 
                     <div className='contactInfo'>
                         <div className='contactBox'>
@@ -70,15 +70,16 @@ function Contact() {
                     </div>
 
                     
+
+                    
                 </div>
-                    {/*</div>*/}
-                {/*</div>*/}
+              
 
 
 
 
             </section>
-        </div>
+      
 
 
 

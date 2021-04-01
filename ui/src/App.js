@@ -165,8 +165,7 @@ useEffect (() =>{
 
       <Navbar/>
       
-      <body>
-
+     
     
 
 
@@ -189,7 +188,7 @@ useEffect (() =>{
      
      
 
-     </body>
+     
      
       <Footer/>
      
