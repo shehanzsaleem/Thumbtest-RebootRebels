@@ -19,8 +19,7 @@ function Navbar() {
         <ul className="navbar-nav ml-auto ml-2 mb-lg-0 ">
           <li className="nav-item">
             <Link className="nav-link ml-4" aria-current="page" to="/">Home&nbsp;
- {/* <i class="fas fa-home">
- </i> */}
+
             </Link>
           </li>
           <li className="nav-item">
@@ -38,7 +37,7 @@ function Navbar() {
           {/* <button type="button" className="btn btn-outline-secondary mr-1">Secondary</button> */}
           <li class="divider-vertical"></li>
         </ul>
-        <Link className="" to="/Login">
+        <Link className="" to="/Signup">
         <button type="button" className="btn btn-outline-secondary ml-4">Log In</button>
         </Link>
         {/* <form className="d-flex">
