@@ -23,9 +23,9 @@ import PrivateRoute from "./components/layouts/PrivateRoute"
 import ForgotPassword from "./components/layouts/ForgotPassword"
 import UpdateProfile from "./components/layouts/UpdateProfile"
 import Signup from "./components/layouts/Signup"
-import { Container } from "react-bootstrap"
+// import { Container } from "react-bootstrap"
 import { AuthProvider } from "./components/layouts/AuthContext"
-import { BsJustify } from 'react-icons/bs';
+// import { BsJustify } from 'react-icons/bs';
 
 
 const App = () =>{
