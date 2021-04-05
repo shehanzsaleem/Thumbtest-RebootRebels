@@ -120,3 +120,7 @@ Date: Mon, 05 Apr 2021 22:57:44 GMT
 [2021-04-05 22:57:44Z INFO MessageListener] Session created.
 [2021-04-05 22:57:44Z INFO Terminal] WRITE LINE: 2021-04-05 22:57:44Z: Listening for Jobs
 [2021-04-05 22:57:44Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2021-04-05 23:08:45Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2021-04-05 23:08:45Z WARN GitHubActionsService] GET request to https://pipelines.actions.githubusercontent.com/HCSX9TJrzON3pGO7tpt7tT054OMlnjyB4OrdaLOK4zejEzLd1m/_apis/distributedtask/pools/1/messages?sessionId=d54f2790-29a9-45cd-b22c-b7c30828055a has been cancelled.
+[2021-04-05 23:08:45Z INFO MessageListener] Get next message has been cancelled.
+[2021-04-05 23:08:45Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
