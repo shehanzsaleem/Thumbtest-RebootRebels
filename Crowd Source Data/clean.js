@@ -19,6 +19,8 @@ function setup() {
     storageBucket: "",
     messagingSenderId: "590040209608"
   };
+
+
   firebase.initializeApp(config);
   database = firebase.database();
 
@@ -28,6 +30,8 @@ function setup() {
   rgbDiv = createDiv().parent('#root');
   bodyElement = document.body;
   ready = true;
+
+
 
   buttons.push(createButton('red-ish').parent('#root').class('red-ish'));
   buttons.push(createButton('green-ish').parent('#root').class('green-ish'));
@@ -44,6 +48,8 @@ function setup() {
     buttons[i].mouseClicked(showSampleData);
   }
 
+
+
   //Commenting out the loading of data for the webpage running
   console.log("Retreiving data... (this can take a minute or two)");
   showLoading();
@@ -59,7 +65,75 @@ function setup() {
     console.log("let green_data = cleanData(dataSave, 'green-ish', 60, 180)");
     console.log("For any help, please see the documentation above each function in the code!");
   });
+
+
+  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /** Produce a filtered version of the input data.
  *   First, all data whose label does not match 'name' is discarded.

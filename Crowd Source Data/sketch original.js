@@ -36,6 +36,7 @@ function setup() {
 
   pickColor();
   ready = true;
+  
   rgbDiv.html(`R:${r} G:${g} B:${b}`);
 
   buttons.push(createButton('red-ish').parent('#root').class('red-ish'));
@@ -67,6 +68,7 @@ function setup() {
 }
 
 async function sendData() {
+
    if(!ready) return;
   showLoading();
   // send this data to something?
@@ -101,6 +103,7 @@ async function sendData() {
       setTimeout(hideLoading, 600);
     }
   }
+
 }
 
 

@@ -2,74 +2,412 @@
 <html>
 
 <head>
+
+
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-firestore.js"></script>
+
+
+
+
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<title>Crowd Source ThumbTest Data</title>
-
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+
+	<link href="grid.css" rel="stylesheet" />
+
 	<link href="style.css" rel="stylesheet" />
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
-
-	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
-
-	<script src="sketch.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js">
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js">
+	</script>
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
 			aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+			<span class="navbar-toggler-icon">
+			</span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarToggler">
-			<a class="navbar-brand" href="#"><b>Crowd Source ThumbTest Data</b></a>
+			<a class="navbar-brand" href="#">
+				<b>ThumbTest Crowd
+					Source Data</b>
+			</a>
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<!-- <li class="nav-item active">
-	        <a class="nav-link" href="#">Source Color<span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="clean.html">Clean Data</a>
-	      </li> -->
+				
 			</ul>
 		</div>
 	</nav>
-
-
+	
 	<div class="container">
 
-		<div class="row">
-			<div class="col-3">
-				sa
+		<div class="row mt-5">
+
+
+			<div class="col-6 first_div" id="first_div">
+				<div class="crop">
+					<img id="rightimage" width="100%">
+					<div id="details" class="style-scope ytd-rich-grid-media">
+						<a id="avatar-link" class="yt-simple-endpoint style-scope ytd-rich-grid-media" tabindex="-1"
+							title="Clément Mihailescu" href="/channel/UCaO6VoaYJv4kS-TQO_M-N_g">
+							<yt-img-shadow id="avatar" width="48" class="style-scope ytd-rich-grid-media no-transition"
+								style="background-color: transparent;" loaded="">
+								<!--css-build:shady-->
+								<img id="img" class="style-scope yt-img-shadow" alt="" width="48" src="dp.jpg">
+							</yt-img-shadow>
+						</a>
+						<div id="meta" class="style-scope ytd-rich-grid-media">
+							<h3 class="style-scope ytd-rich-grid-media" style="font-size: 1.17em">
+								<a id="video-title-link">
+									Performance test: A Simple Definition
+								</a>
+							</h3>
+							<div class="byline style-scope ytd-rich-grid-media">
+								<ytd-badge-supported-renderer class="ad-badge style-scope ytd-rich-grid-media"
+									hidden="">
+									<!--css-build:shady-->
+									<dom-repeat id="repeat" as="badge" class="style-scope ytd-badge-supported-renderer">
+										<template is="dom-repeat">
+										</template>
+									</dom-repeat>
+								</ytd-badge-supported-renderer>
+								<ytd-video-meta-block rich-meta="" class="grid style-scope ytd-rich-grid-media"
+									mini-mode="">
+									<!--css-build:shady-->
+									<div id="metadata" class="style-scope ytd-video-meta-block">
+										<div id="byline-container" class="style-scope ytd-video-meta-block">
+											<ytd-channel-name id="channel-name"
+												class="style-scope ytd-video-meta-block">
+												<!--css-build:shady-->
+												<div id="container" class="style-scope ytd-channel-name">
+													<div id="text-container" class="style-scope ytd-channel-name">
+														<yt-formatted-string id="text" title=""
+															class="style-scope ytd-channel-name complex-string"
+															ellipsis-truncate="" has-link-only_="">
+															<a class="yt-simple-endpoint style-scope yt-formatted-string"
+																spellcheck="false"
+																href="/channel/UCaO6VoaYJv4kS-TQO_M-N_g" dir="auto"
+																style="font-size: 14px; font-weight: 400; color: #606060;">Mike
+																Andrews</a>
+
+														</yt-formatted-string>
+													</div>
+													<tp-yt-paper-tooltip fit-to-visible-bounds=""
+														class="style-scope ytd-channel-name" role="tooltip"
+														tabindex="-1">
+														<!--css-build:shady-->
+														<div id="tooltip"
+															class="hidden style-scope tp-yt-paper-tooltip">
+															Clément Mihailescu
+														</div>
+													</tp-yt-paper-tooltip>
+												</div>
+												<ytd-badge-supported-renderer class="style-scope ytd-channel-name"
+													style="color: #606060;">
+													<!--css-build:shady-->
+													<div
+														class="badge badge-style-type-verified style-scope ytd-badge-supported-renderer">
+														<yt-icon class="style-scope ytd-badge-supported-renderer">
+															<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+																focusable="false" class="style-scope yt-icon"
+																style="pointer-events: none; display: block; width: 100%; height: 100%;">
+																<g class="style-scope yt-icon">
+																	<path fill-rule="evenodd" clip-rule="evenodd"
+																		d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+																		class="style-scope yt-icon">
+																	</path>
+																</g>
+															</svg>
+															<!--css-build:shady-->
+														</yt-icon>
+														<span class="style-scope ytd-badge-supported-renderer">
+														</span>
+														<tp-yt-paper-tooltip position="top"
+															class="style-scope ytd-badge-supported-renderer"
+															role="tooltip" tabindex="-1">
+															<!--css-build:shady-->
+															<div id="tooltip"
+																class="hidden style-scope tp-yt-paper-tooltip">
+																Verified
+															</div>
+														</tp-yt-paper-tooltip>
+													</div>
+													<dom-repeat id="repeat" as="badge"
+														class="style-scope ytd-badge-supported-renderer">
+														<template is="dom-repeat">
+														</template>
+													</dom-repeat>
+												</ytd-badge-supported-renderer>
+											</ytd-channel-name>
+											<div id="separator" class="style-scope ytd-video-meta-block">•</div>
+										</div>
+										<div id="metadata-line" class="style-scope ytd-video-meta-block"
+											style="line-height: 12px;">
+											<span class="style-scope ytd-video-meta-block"
+												style="font-size: 14px; font-weight: 400; color: #606060;">24K
+												views</span>
+											<span class="style-scope ytd-video-meta-block"
+												style="font-size: 14px; font-weight: 400; color: #606060;">1 month
+												ago</span>
+											<dom-repeat strip-whitespace="" class="style-scope ytd-video-meta-block">
+												<template is="dom-repeat">
+												</template>
+											</dom-repeat>
+										</div>
+									</div>
+									<div id="additional-metadata-line" class="style-scope ytd-video-meta-block">
+										<dom-repeat class="style-scope ytd-video-meta-block">
+											<template is="dom-repeat">
+											</template>
+										</dom-repeat>
+									</div>
+								</ytd-video-meta-block>
+							</div>
+							<div class="metadata-snippet-container style-scope ytd-rich-grid-media" hidden="">
+								<yt-formatted-string class="description-snippet style-scope ytd-rich-grid-media">This is
+									the story of my very first software engineering job interview at a company called
+									Replit. I hadn't done any coding interviews before this one, and I had just
+									graduated from a coding...</yt-formatted-string>
+							</div>
+							<div class="style-scope ytd-rich-grid-media" hidden="">
+								<ul class="playlist-video-list style-scope ytd-rich-grid-media">
+									<dom-repeat as="video" class="style-scope ytd-rich-grid-media">
+										<template is="dom-repeat">
+										</template>
+									</dom-repeat>
+								</ul>
+								<yt-formatted-string class="view-more-link style-scope ytd-rich-grid-media" hidden="">
+									<!--css-build:shady-->
+								</yt-formatted-string>
+							</div>
+							<ytd-badge-supported-renderer class="video-badge style-scope ytd-rich-grid-media"
+								disable-upgrade="" hidden="">
+							</ytd-badge-supported-renderer>
+							<div id="buttons" class="style-scope ytd-rich-grid-media">
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="btn btn-danger btn-block mt-3" id="buttonright"> This </div>
 			</div>
-			<div class="col-3" id="myImg">
-			 
+
+
+			<div class="col-6 second_div" id="second_div">
+				<div class="crop">
+					<img id="leftimage" width="100%">
+					<div id="details" class="style-scope ytd-rich-grid-media">
+						<a id="avatar-link" class="yt-simple-endpoint style-scope ytd-rich-grid-media" tabindex="-1"
+							title="Clément Mihailescu" href="/channel/UCaO6VoaYJv4kS-TQO_M-N_g">
+							<yt-img-shadow id="avatar" width="48" class="style-scope ytd-rich-grid-media no-transition"
+								style="background-color: transparent;" loaded="">
+								<!--css-build:shady-->
+								<img id="img" class="style-scope yt-img-shadow" alt="" width="48" src="dp.jpg">
+							</yt-img-shadow>
+						</a>
+						<div id="meta" class="style-scope ytd-rich-grid-media">
+							<h3 class="style-scope ytd-rich-grid-media" style="font-size: 1.17em">
+								<a id="video-title-link">
+									Performance test: A Simple Definition
+								</a>
+							</h3>
+							<div class="byline style-scope ytd-rich-grid-media">
+								<ytd-badge-supported-renderer class="ad-badge style-scope ytd-rich-grid-media"
+									hidden="">
+									<!--css-build:shady-->
+									<dom-repeat id="repeat" as="badge" class="style-scope ytd-badge-supported-renderer">
+										<template is="dom-repeat">
+										</template>
+									</dom-repeat>
+								</ytd-badge-supported-renderer>
+								<ytd-video-meta-block rich-meta="" class="grid style-scope ytd-rich-grid-media"
+									mini-mode="">
+									<!--css-build:shady-->
+									<div id="metadata" class="style-scope ytd-video-meta-block">
+										<div id="byline-container" class="style-scope ytd-video-meta-block">
+											<ytd-channel-name id="channel-name"
+												class="style-scope ytd-video-meta-block">
+												<!--css-build:shady-->
+												<div id="container" class="style-scope ytd-channel-name">
+													<div id="text-container" class="style-scope ytd-channel-name">
+														<yt-formatted-string id="text" title=""
+															class="style-scope ytd-channel-name complex-string"
+															ellipsis-truncate="" has-link-only_="">
+															<a class="yt-simple-endpoint style-scope yt-formatted-string"
+																spellcheck="false"
+																href="/channel/UCaO6VoaYJv4kS-TQO_M-N_g" dir="auto"
+																style="font-size: 14px; font-weight: 400; color: #606060;">Mike
+																Andrews</a>
+
+														</yt-formatted-string>
+													</div>
+													<tp-yt-paper-tooltip fit-to-visible-bounds=""
+														class="style-scope ytd-channel-name" role="tooltip"
+														tabindex="-1">
+														<!--css-build:shady-->
+														<div id="tooltip"
+															class="hidden style-scope tp-yt-paper-tooltip">
+															Clément Mihailescu
+														</div>
+													</tp-yt-paper-tooltip>
+												</div>
+												<ytd-badge-supported-renderer class="style-scope ytd-channel-name"
+													style="color: #606060;">
+													<!--css-build:shady-->
+													<div
+														class="badge badge-style-type-verified style-scope ytd-badge-supported-renderer">
+														<yt-icon class="style-scope ytd-badge-supported-renderer">
+															<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"
+																focusable="false" class="style-scope yt-icon"
+																style="pointer-events: none; display: block; width: 100%; height: 100%;">
+																<g class="style-scope yt-icon">
+																	<path fill-rule="evenodd" clip-rule="evenodd"
+																		d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10 S17.52,2,12,2z M9.92,17.93l-4.95-4.95l2.05-2.05l2.9,2.9l7.35-7.35l2.05,2.05L9.92,17.93z"
+																		class="style-scope yt-icon">
+																	</path>
+																</g>
+															</svg>
+															<!--css-build:shady-->
+														</yt-icon>
+														<span class="style-scope ytd-badge-supported-renderer">
+														</span>
+														<tp-yt-paper-tooltip position="top"
+															class="style-scope ytd-badge-supported-renderer"
+															role="tooltip" tabindex="-1">
+															<!--css-build:shady-->
+															<div id="tooltip"
+																class="hidden style-scope tp-yt-paper-tooltip">
+																Verified
+															</div>
+														</tp-yt-paper-tooltip>
+													</div>
+													<dom-repeat id="repeat" as="badge"
+														class="style-scope ytd-badge-supported-renderer">
+														<template is="dom-repeat">
+														</template>
+													</dom-repeat>
+												</ytd-badge-supported-renderer>
+											</ytd-channel-name>
+											<div id="separator" class="style-scope ytd-video-meta-block">•</div>
+										</div>
+										<div id="metadata-line" class="style-scope ytd-video-meta-block"
+											style="line-height: 12px;">
+											<span class="style-scope ytd-video-meta-block"
+												style="font-size: 14px; font-weight: 400; color: #606060;">24K
+												views</span>
+											<span class="style-scope ytd-video-meta-block"
+												style="font-size: 14px; font-weight: 400; color: #606060;">1 month
+												ago</span>
+											<dom-repeat strip-whitespace="" class="style-scope ytd-video-meta-block">
+												<template is="dom-repeat">
+												</template>
+											</dom-repeat>
+										</div>
+									</div>
+									<div id="additional-metadata-line" class="style-scope ytd-video-meta-block">
+										<dom-repeat class="style-scope ytd-video-meta-block">
+											<template is="dom-repeat">
+											</template>
+										</dom-repeat>
+									</div>
+								</ytd-video-meta-block>
+							</div>
+							<div class="metadata-snippet-container style-scope ytd-rich-grid-media" hidden="">
+								<yt-formatted-string class="description-snippet style-scope ytd-rich-grid-media">This is
+									the story of my very first software engineering job interview at a company called
+									Replit. I hadn't done any coding interviews before this one, and I had just
+									graduated from a coding...</yt-formatted-string>
+							</div>
+							<div class="style-scope ytd-rich-grid-media" hidden="">
+								<ul class="playlist-video-list style-scope ytd-rich-grid-media">
+									<dom-repeat as="video" class="style-scope ytd-rich-grid-media">
+										<template is="dom-repeat">
+										</template>
+									</dom-repeat>
+								</ul>
+								<yt-formatted-string class="view-more-link style-scope ytd-rich-grid-media" hidden="">
+									<!--css-build:shady-->
+								</yt-formatted-string>
+							</div>
+							<ytd-badge-supported-renderer class="video-badge style-scope ytd-rich-grid-media"
+								disable-upgrade="" hidden="">
+							</ytd-badge-supported-renderer>
+							<div id="buttons" class="style-scope ytd-rich-grid-media">
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="btn btn-danger btn-block mt-3" id="buttonleft"> This </div>
 			</div>
-			<div class="col-3">
-				<img id="rightimage" src="" >
-			</div>
-			<div class="col-3">
-				sa
-			</div>
+
+
+
+
 		</div>
 
-	</div>
 
-	<div id="root">
-		<div class="loading" style="display:none;">
-			<img src="loading.svg" alt="Loading...">
+
+
+		<div class="row mt-5" id="content">
+
+
+
 		</div>
 	</div>
 
 
+	<script>
+
+
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyAewdopP2CsgfQ7qLukausWYO_I1zzZlSU",
+			authDomain: "thumbnails-6d746.firebaseapp.com",
+			projectId: "thumbnails-6d746",
+			storageBucket: "thumbnails-6d746.appspot.com",
+			messagingSenderId: "636145686193",
+			appId: "1:636145686193:web:af7795f5114f7556b77490",
+			measurementId: "G-76N3RXB95K"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+
+
+		const database = firebase.firestore();
+
+
+		database.settings({
+			timestampsInSnapshots: true
+		});
+
+
+	</script>
+
+
+	<script src="script.js">
+	</script>
 </body>
+
+<link href="youtubestyle.css" rel="stylesheet" />
 
 </html>
