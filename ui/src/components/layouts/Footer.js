@@ -10,7 +10,7 @@ function Footer() {
 
 
             <div class="bg-dark footer text-white " style={{ backgroundColor: '#111111' }}>
-                <div class="container-fluid p-3 ">
+                <div class="container p-3 ">
 {/* 
                     <section class="text-center mb-4 pt-1">
                         <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
@@ -57,9 +57,9 @@ function Footer() {
                     <section class="">
                         <div class="row">
                             <div class="col-lg-5 col-md-10 mb-4 mt-4 mb-md-4">
-                                <img src={logo} alt="logo" style={{ width: '150px' }} />
+                                <img src={logo} alt="logo" style={{ position:'relative', left:'-5px', width: '150px' }} />
                            
-                                <p className='ml-1 mt-3'>
+                                <p className='mt-3'>
                                     The Ultimate Thumnail Tool for Youtubers
  </p>
                                 <hr />

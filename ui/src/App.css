@@ -96,11 +96,11 @@ footer {
   background: #350000;
 }
 
-.score__container-card:hover {
+/* .score__container-card:hover {
   transform: scale(1.01);
   transition: all 0.1s ease-out;
   color: #1c2237;
-}
+} */
 
 .score__container-card:nth-child(2) {
   margin: 0 24px;
@@ -141,9 +141,9 @@ footer {
   transform: scaleX(0);
 }
 
-.hover-1:hover:before {
+/* .hover-1:hover:before {
   transform: scaleX(1);
-}
+} */
 
 .score_second {
   /* background: url(images/sample_thumbnail_02.jpg); */
@@ -240,9 +240,9 @@ footer {
     margin: 24px;
   }
 
-  .score__container-card:hover {
+  /* .score__container-card:hover {
     transform: none;
-  }
+  } */
 }
 
 .home__hero-section {

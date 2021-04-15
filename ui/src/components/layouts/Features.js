@@ -18,10 +18,10 @@ function Features({
     alt,
     imgStart }) {
     return (
-        <div className="container">
+        <div className="container mb-5">
             <div className="row">
           
-            <div className="col-4 tiles-item-inner text-center">
+            <div className="col-md-4 col-6 tiles-item-inner text-center">
 
 <div className=" text-center  features-tiles-item-image mb-4">
         <img src={logob} width="64" height="64" alt="Features tile icon 01"/>
@@ -37,7 +37,7 @@ function Features({
     </p>
 </div>
 
-<div className="col-4 tiles-item-inner text-center">
+<div className="col-md-4 col-6 tiles-item-inner text-center">
 
 <div className=" text-center  features-tiles-item-image mb-4">
         <img src={logob} width="64" height="64" alt="Features tile icon 01"/>
@@ -52,7 +52,7 @@ function Features({
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
     </p>
 </div>
-<div className="col-4 tiles-item-inner text-center">
+<div className="col-md-4 col-6 tiles-item-inner text-center">
 
 <div className=" text-center  features-tiles-item-image mb-4">
         <img src={logob} width="64" height="64" alt="Features tile icon 01"/>
@@ -67,7 +67,7 @@ function Features({
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
     </p>
 </div>
-<div className="col-4 tiles-item-inner text-center">
+<div className="col-md-4 col-6 tiles-item-inner text-center">
 
 <div className=" text-center  features-tiles-item-image mb-4">
         <img src={logob} width="64" height="64" alt="Features tile icon 01"/>
@@ -82,7 +82,7 @@ function Features({
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
     </p>
 </div>
-<div className="col-4 tiles-item-inner text-center">
+<div className="col-md-4 col-6 tiles-item-inner text-center">
 
 <div className=" text-center  features-tiles-item-image mb-4">
         <img src={logob} width="64" height="64" alt="Features tile icon 01"/>
@@ -97,7 +97,7 @@ function Features({
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
     </p>
 </div>
-<div className="col-4 tiles-item-inner text-center">
+<div className="col-md-4 col-6 tiles-item-inner text-center">
 
 <div className=" text-center  features-tiles-item-image mb-4">
         <img src={logob} width="64" height="64" alt="Features tile icon 01"/>
