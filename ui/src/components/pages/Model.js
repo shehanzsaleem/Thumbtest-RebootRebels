@@ -94,7 +94,7 @@ function model() {
                             $('.progress-bar').show();
                             console.log("Loading model...");
 
-                            modeljson = await tf.loadLayersModel('/model/model.json');
+                            modeljson = await tf.loadLayersModel('/model-thumbnail/model.json');
                             // const contentLength = modeljson.headers.get('content-length');
 
                             // console.log(contentLength);

@@ -26,12 +26,12 @@ function Video() {
       <div className='video_icon'>
         <ul className='up_icons'>
           {/* <li>
-      <i class="bi bi-box-arrow-in-down"></i>
-     </li> */}
+ <i class="bi bi-box-arrow-in-down"></i>
+ </li> */}
         </ul>
         <p style={{ textAlign: 'center' }}>
           Click the button to Choose a video.
-     </p>
+ </p>
       </div>
       <div className='row mb-2'>
         <div className='col-8'>
@@ -65,7 +65,7 @@ function Video() {
                 function initCanvas(e) {
                   canvas.width = this.videoWidth;
                   canvas.height = this.videoHeight;
-                }   
+                }
                 function drawFrame(e) {
                   this.pause();
                   ctx.drawImage(this, 0, 0);
@@ -95,18 +95,18 @@ function Video() {
                   var gap = Math.ceil((array.length / 10));
                   var newArray = []
                   // for (var i = 0; i < array.length; i++) {
-                  //  img = new Image();
-                  //  img.onload = revokeURL;
-                  //  img.src = URL.createObjectURL(array[i]);
-                  //  document.body.appendChild(img);
+                  // img = new Image();
+                  // img.onload = revokeURL;
+                  // img.src = URL.createObjectURL(array[i]);
+                  // document.body.appendChild(img);
                   // }
                   // for (var i = 0; i < array.length; i+=gap) {
-                  //  img = new Image();
-                  //  img.onload = revokeURL;
-                  //  img.src = URL.createObjectURL(array[i]);
-                  //  newArray.push(img.src);
-                  //  // document.getElementById("selected-image0").src = 
-                  //  // document.body.appendChild(img);
+                  // img = new Image();
+                  // img.onload = revokeURL;
+                  // img.src = URL.createObjectURL(array[i]);
+                  // newArray.push(img.src);
+                  // // document.getElementById("selected-image0").src = 
+                  // // document.body.appendChild(img);
                   // }
                   for (var i = 0; i < array.length; i++) {
                     img = new Image();
@@ -115,12 +115,12 @@ function Video() {
                     // console.log(img.src);
                     // console.log(Math.round(i/gap));
                     // if you haven't already, install the SDK with 'npm install sightengine --save'
-                    //   var sightengine = require('sightengine')('840618205', 'xnzUkEGjk2D7EPYpV6se');
-                    //   sightengine.check(['nudity', 'wad', 'properties', 'celebrities', 'offensive', 'faces', 'face-attributes']).set_file(URL.createObjectURL(array[i])).then(function (result) {
-                    //    // The API response (result)
-                    //   }).catch(function (err) {
-                    //    // Handle error
-                    //   });
+                    // var sightengine = require('sightengine')('840618205', 'xnzUkEGjk2D7EPYpV6se');
+                    // sightengine.check(['nudity', 'wad', 'properties', 'celebrities', 'offensive', 'faces', 'face-attributes']).set_file(URL.createObjectURL(array[i])).then(function (result) {
+                    // // The API response (result)
+                    // }).catch(function (err) {
+                    // // Handle error
+                    // });
 
 
                     console.log((Math.floor((i / gap))));
@@ -129,7 +129,7 @@ function Video() {
                     // document.body.appendChild(img);
 
 
-                    if(i > (array.length-2)){
+                    if (i > (array.length - 2)) {
                       loadTumbnailModel(getThumbnailScore);
                     }
 
@@ -137,12 +137,12 @@ function Video() {
 
                   }
                   // for (var j = 0; j < newArray.length; j++) {
-                  //  document.getElementById("selected-image"+j).src = newArray[j];
+                  // document.getElementById("selected-image"+j).src = newArray[j];
                   // }
                   // we don't need the video's objectURL anymore
                   URL.revokeObjectURL(this.src);
 
-                  
+
 
                 }
 
@@ -167,10 +167,10 @@ function Video() {
                   console.log("Model loaded.");
                   // $('#modelprogress').hide();
                   var downloadModel = document.getElementById("modelprogress");
-                  
+
                   e();
                 }
-                 
+
                 async function getThumbnailScore() {
                   console.log("Button Clicked...");
                   for (let i = 0; i < 10; i++) {
@@ -207,20 +207,20 @@ function Video() {
 
             }
 
-          } className="btn btn-light  float-right btn-outline-primary">Generate Thumbnail</button>
+          } className="btn btn-light float-right btn-outline-primary">Generate Thumbnail</button>
         </div>
       </div>
       {/*set 1*/}
       <div className='row mb-2'>
         {/*boxes*/}
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -233,13 +233,13 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image1" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -252,13 +252,13 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image2" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -275,13 +275,13 @@ function Video() {
       <div className='row mb-2'>
         {/*boxes*/}
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image3" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -294,13 +294,13 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image4" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -313,13 +313,13 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image5" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -336,13 +336,13 @@ function Video() {
       <div className='row mb-2'>
         {/*boxes*/}
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image6" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -355,13 +355,13 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image7" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -374,13 +374,13 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image8" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -395,13 +395,13 @@ function Video() {
       </div>
       <div className='row mb-2'>
         <div className='col-md-4'>
-          <div className=' '>
-            <div className='  '>
-              {   /*<div className='icon'>
-        <FaFire />
-       </div>  */}
+          <div >
+            <div className=' '>
+              { /*<div className='icon'>
+ <FaFire />
+ </div> */}
               {/*<ol id='prediction-list0'></ol> 
-       <h4 id='prediction-percentage0'></h4>*/}
+ <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image9" /*className="score_second" /*src="./sample_thumbnail_01"*/ />

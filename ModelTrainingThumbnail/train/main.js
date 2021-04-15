@@ -21,6 +21,8 @@ async function run(epochs, batchSize, modelSavePath) {
   const validationSplit = 0.15;
 
   await model.fit(trainImages, trainLabels, {
+    verbose: true,
+    shuffle : true,
     epochs,
     batchSize,
     validationSplit
