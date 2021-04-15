@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-function HeroSection({
+
+
+function JumboTron({
   lightBg,
   topLine,
   lightText,
@@ -19,8 +21,8 @@ function HeroSection({
 
 
 
-
-
+    
+    
 
 
 
@@ -33,27 +35,39 @@ function HeroSection({
         }} >
 
           <div className='col'>
-            <div className='home__hero-text-wrapper'>
-              <h3 className='top-line'>{topLine}
-              </h3>
-              <h3 className={lightText ? 'heading' : 'heading dark'}
+            <div className='home__jumbo-text-wrapper'>
+          
+              {/* <h3 className='top-line'>{topLine}
+              </h3> */}
+
+              
+              <h1 className={lightText ? 'large-heading center' : 'large-heading dark'}
               > {headline}
-              </h3>
-              <p className={lightTextDesc ? 'home__hero-subtitle' : 'home__hero-subtitle dark'}
+              </h1>
+
+              
+              <p className={lightTextDesc ? 'home__jumbo-subtitle' : 'home__jumbo-subtitle dark'}
               > {description}
               </p>
 
-              {/* <Link to='./Model'>
-                <button type="button" className="btn btn-outline-secondary ml-center">Begin</button>
-              </Link> */}
-              
+
+<div className="d-flex justify-content-center">
+
+              <Link to='./Model'>
+                <button type="button" className="btn btn-secondary ml-center">Begin</button>
+              </Link>
+
+            
+
+              </div>
             </div>
           </div>
 
-          <div className='col'>
+          {/* <div className='col'>
             <div className='home__hero-img-wrapper' style={{height:'400px',marginRight:'50px'}} >
             </div>
-          </div>
+          </div> */}
+
         </div>
       </div>
     </div>
@@ -63,9 +77,11 @@ function HeroSection({
 
 
 
-
-
-
   );
 }
-export default HeroSection;
+
+
+
+
+
+export default JumboTron;

@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     
-    <nav className="navbar navbar-dark bg-dark navbar-expand-lg navbar-fixed-top">
-
+    <nav className="navbar navbar-dark  navbar-expand-lg navbar-fixed-top">
+{/* bg-dark */}
       <img src={logo} alt="logo" style={{ width: '150px' }} />
 
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
