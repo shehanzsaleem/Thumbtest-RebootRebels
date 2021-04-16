@@ -177,19 +177,21 @@ function model() {
                 <div className='col-12'>
                     {/* <h2 className=''>Your Scores</h2> */}
                 </div>
-                <div className='col-md-4'>
+
+
+                <div className='col-lg-4 col-md-12'>
                     <div className='score__container-card'>
                         <div className='score__container-cardInfo'>
-                            <div className='icon'>
-                                <FaFire />
-                            </div>
+                          
                             {/* <h3>Second </h3> */}
                             <ol id='prediction-list0'>
                             </ol>
                             <h4 id='prediction-percentage0'></h4>
                             <div class="containerp">
                                 <div className='image-wrapper'>
-                                    <img id="selected-image0" className="score_second" /*src="./sample_thumbnail_01"*/ />
+                                  
+                                <img id="selected-image0" className="score_best" 
+   />
                                 </div>  </div>
                             {/* <p>per month</p>
  <ul className='score__container-features'>
@@ -203,19 +205,17 @@ function model() {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-4'>
+                <div className='col-lg-4 col-md-12'>
                     <div className='score__container-card'>
                         <div className='score__container-cardInfo'>
-                            <div className='icon'>
-                                <BsXDiamondFill />
-                            </div>
+                           
                             {/* <h3>Best</h3> */}
                             <ol id='prediction-list1'>
                             </ol>
                             <h4 id='prediction-percentage1'></h4>
                             <div class="containerp">
                                 <div className='image-wrapper'>
-                                    <img id="selected-image1" className="score_best" /*src="./sample_thumbnail_01"*/ />
+                                    <img id="selected-image1" className="score_best" />
                                 </div>
                             </div>
                             {/* <p>per month</p>
@@ -230,19 +230,17 @@ function model() {
                         </div>
                     </div>
                 </div>
-                <div className='col-md-4'>
+                <div className='col-lg-4 col-md-12'>
                     <div className='score__container-card'>
                         <div className='score__container-cardInfo'>
-                            <div className='icon'>
-                                <GiCrystalize />
-                            </div>
+                           
                             {/* <h3>Third</h3> */}
                             <ol id='prediction-list2'>
                             </ol>
                             <h4 id='prediction-percentage2'></h4>
                             <div class="containerp">
                                 <div className='image-wrapper'>
-                                    <img id="selected-image2" className="score_third" /*src="./sample_thumbnail_01"*/ />
+                                <img id="selected-image2" className="score_best"  />
                                 </div></div>
                             {/* <div className="score_third">
 </div> */}
@@ -258,6 +256,16 @@ function model() {
                         </div>
                     </div>
                 </div>
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
             </div>
         </div>
     );
