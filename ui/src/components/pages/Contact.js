@@ -14,15 +14,19 @@ function Contact() {
 
 
                 <div className='content'>
-                    <h2>Get in touch with us</h2>
-                    <p>We'd love to help you start exceeding your CX goals. bla.. bla... </p>
+
+                <h1 className='large-heading center'>
+          Get in touch with us
+              </h1>
+ 
+                    <p className='home__jumbo-subtitle'>We'd love to help you start exceeding your CX goals. bla.. bla... </p>
                 </div>
 
-                <div className='contactcontainer'>
+                <div className='container mt-5'>
                     
-                
+                <div className='row align-items-center'>
 
-                    <div className='contactInfo'>
+                    <div className='col-6'>
                         <div className='contactBox'>
                             <div class='iconContact'><i class="fa fa-phone" aria-hidden="true"></i></div>
                             <div className='contactText'>
@@ -43,9 +47,12 @@ function Contact() {
 
                     {/*<div className='col-6'>*/}
 
-                    <div className='contactForm'>
+                    <div className='col-6'>
+                    <div className='contactBox'>
                         <form>
-                            <h2>Send Massage</h2>
+
+                            
+                            <h2>Send Message</h2>
 
                             <div className='inputBox'>
                                 <input type='text' name='' required='required'></input>
@@ -67,14 +74,15 @@ function Contact() {
                             </div>
 
                         </form>
-                    </div>
+                        </div>  </div>
 
                     
 
                     
+               
                 </div>
               
-
+                </div>
 
 
 

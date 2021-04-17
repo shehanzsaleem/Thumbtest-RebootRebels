@@ -1,7 +1,4 @@
 
-
-
-
 import React from "react";
 import $, { ajax } from 'jquery';
 import * as tf from '@tensorflow/tfjs';
@@ -13,55 +10,96 @@ const MAX_LENGTH = 3;
 let modeljson;
 
 
+function getExtension(filename) {
+  var parts = filename.split('.');
+  return parts[parts.length - 1];
+} 
 
 
 
+function isVideo(filename) {
+  var ext = getExtension(filename);
+  switch (ext.toLowerCase()) {
+    case 'm4v':
+    case 'avi':
+    case 'mpg':
+    case 'mp4':
+      // etc
+      return true;
+  }
+  return false;
+}
 
 function Video() {
   return (
-    <div className='container mt-5'>
-      <div class="progress">
-        <div id="progress" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-      <div className='video_icon'>
-        <ul className='up_icons'>
-          {/* <li>
- <i class="bi bi-box-arrow-in-down"></i>
- </li> */}
-        </ul>
-        <p style={{ textAlign: 'center' }}>
-          Click the button to Choose a video.
- </p>
-      </div>
+    <div className='container mt-5' >
+
+
+ 
+
+
+      <div className="progress">
+          <div id="progress" className="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+
+      
+      
+
       <div className='row mb-2'>
         <div className='col-8'>
-          {/* <i class="bi bi-box-arrow-in-down"></i>*/}
-          <input id='video-selector' className='form-control border-0' type='file' onChange={
-            async function (e) { }
+
+        <div className="file-upload">
+  <div className="file-select">
+    <div className="file-select-button" id="fileName">Choose File</div>
+    <div className="file-select-name" id="noFile">No file chosen...</div> 
+    <input id='video-selector' className='file-upload border-0' type='file' accept="video/*" onChange={
+          
+
+            async function (e) {
+              var filename = $("#video-selector").val();
+          
+              if (/^\s*$/.test(filename)) {
+               
+                $(".file-upload").removeClass('active');
+                $("#noFile").text("No file chosen..."); 
+              }
+              else {
+          
+                $(".file-upload").addClass('active');
+                $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+              }
+            }
+
           } /*multiple */ />
-        </div>
-        <div className='col-4'>
+  </div>
+</div>
+
+
+</div>
+<div className='col-4'>
+      
+      
           <button type="button" id='predict-button' onClick={
-
-
             async function () {
               console.log("Button Clicked...");
               console.log("Video Selected...");
               let reader = new FileReader();
               let file = $("#video-selector").prop('files')[0];
+
+
+
               reader.readAsDataURL(file);
               reader.onload = function () {
                 let videoUrl = reader.result;
                 extractFrames(videoUrl);
               }
-
               function extractFrames(video_url) {
                 var video = document.createElement('video');
                 var array = [];
                 var canvas = document.createElement('canvas');
                 var ctx = canvas.getContext('2d');
                 var pro = document.querySelector('#progress');
-
                 function initCanvas(e) {
                   canvas.width = this.videoWidth;
                   canvas.height = this.videoHeight;
@@ -76,6 +114,7 @@ function Video() {
                   */
                   canvas.toBlob(saveFrame, 'image/jpeg');
                   pro.style.width = "100%";
+                  
                   pro.innerHTML = ((this.currentTime / this.duration) * 100).toFixed(2) + ' %';
                   // pro.style.width = ((this.currentTime / this.duration) * 100).toFixed(2) + "%";
                   if (this.currentTime < this.duration) {
@@ -88,7 +127,6 @@ function Video() {
                 function revokeURL(e) {
                   URL.revokeObjectURL(this.src);
                 }
-
                 function onend(e) {
                   var img;
                   // do whatever with the frames
@@ -121,31 +159,19 @@ function Video() {
                     // }).catch(function (err) {
                     // // Handle error
                     // });
-
-
                     console.log((Math.floor((i / gap))));
-
                     document.getElementById("selected-image" + (Math.floor((i / gap)))).src = img.src;
                     // document.body.appendChild(img);
-
-
                     if (i > (array.length - 2)) {
                       loadTumbnailModel(getThumbnailScore);
                     }
-
-
-
                   }
                   // for (var j = 0; j < newArray.length; j++) {
                   // document.getElementById("selected-image"+j).src = newArray[j];
                   // }
                   // we don't need the video's objectURL anymore
                   URL.revokeObjectURL(this.src);
-
-
-
                 }
-
                 video.muted = true;
                 video.addEventListener('loadedmetadata', initCanvas, false);
                 video.addEventListener('timeupdate', drawFrame, false);
@@ -153,10 +179,7 @@ function Video() {
                 // video.src = URL.createObjectURL(this.files[0]);
                 video.src = video_url;
                 video.play();
-
-
                 // loadTumbnailModel(getThumbnailScore);
-
                 async function loadTumbnailModel(e) { //Progress bar and Loading of the Model
                   // $('.progress-bar').show();
                   console.log("Loading model...");
@@ -167,10 +190,8 @@ function Video() {
                   console.log("Model loaded.");
                   // $('#modelprogress').hide();
                   var downloadModel = document.getElementById("modelprogress");
-
                   e();
                 }
-
                 async function getThumbnailScore() {
                   console.log("Button Clicked...");
                   for (let i = 0; i < 10; i++) {
@@ -202,17 +223,14 @@ function Video() {
                     });
                   }
                 }
-
               }
-
             }
-
-          } className="btn btn-light float-right btn-outline-primary">Generate Thumbnail</button>
+          } className="btn btn-small btn-light btn-outline-primary" >Generate Thumbnail</button>
         </div>
+
       </div>
-      {/*set 1*/}
+
       <div className='row mb-2'>
-        {/*boxes*/}
         <div className='col-md-4'>
           <div >
             <div className=' '>
@@ -271,7 +289,6 @@ function Video() {
           </div>
         </div>
       </div>
-      {/*set 2*/}
       <div className='row mb-2'>
         {/*boxes*/}
         <div className='col-md-4'>
@@ -332,7 +349,6 @@ function Video() {
           </div>
         </div>
       </div>
-      {/*set 3*/}
       <div className='row mb-2'>
         {/*boxes*/}
         <div className='col-md-4'>
