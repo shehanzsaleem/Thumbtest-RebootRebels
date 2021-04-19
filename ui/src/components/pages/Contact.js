@@ -19,7 +19,7 @@ function Contact() {
           Get in touch with us
               </h1>
  
-                    <p className='home__jumbo-subtitle'>We'd love to help you start exceeding your CX goals. bla.. bla... </p>
+                    <p className='home__jumbo-subtitle'>We'd love to help you start exceeding your goals.</p>
                 </div>
 
                 <div className='container mt-5'>

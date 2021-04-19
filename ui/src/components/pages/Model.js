@@ -48,8 +48,44 @@ function model() {
                 </div>
             </div>
             <div className='row mb-5'>
+              
+                <div className='col-12'>
+                    <button id='downloadModel' onClick={
+
+
+                        async function () { //Progress bar and Loading of the Model
+                            $('.progress-bar').show();
+                            console.log("Loading model...");
+
+                            modeljson = await tf.loadLayersModel('/model-thumbnail/model.json');
+                            // const contentLength = modeljson.headers.get('content-length');
+
+                            // console.log(contentLength);
+                            // modeljson.summary();
+                            console.log("Model loaded.");
+                            $('#modelprogress').hide();
+                            var downloadModel = document.getElementById("modelprogress");
+
+                        }
+                    }
+                        className='btn btn-secondary' >Download Model(8MB)</button>
+               </div>
+               </div>
+            <div className='row mb-5'>
+
+
+
                 <div className='col-6'>
-                    <input id='image-selector' className='form-control border-0' type='file' onChange={
+                    
+            
+            
+
+            
+        <div className="file-upload">
+  <div className="file-select">
+    <div className="file-select-button" id="fileName">Choose Video</div>
+    <div className="file-select-name" id="noFile">No video chosen...</div> 
+    <input id='image-selector' className='file-upload border-0' type='file' accept="image/x-png,image/gif,image/jpeg" onChange={
                         async function (e) {
                             if (Array.from(e.target.files).length > MAX_LENGTH) {
                                 e.preventDefault();
@@ -85,27 +121,16 @@ function model() {
                             }
                         }
                     } multiple />
+  </div>
+</div>
+
+            
+            
                 </div>
+             
+
+             
                 <div className='col-6'>
-                    <button id='downloadModel' onClick={
-
-
-                        async function () { //Progress bar and Loading of the Model
-                            $('.progress-bar').show();
-                            console.log("Loading model...");
-
-                            modeljson = await tf.loadLayersModel('/model-thumbnail/model.json');
-                            // const contentLength = modeljson.headers.get('content-length');
-
-                            // console.log(contentLength);
-                            // modeljson.summary();
-                            console.log("Model loaded.");
-                            $('#modelprogress').hide();
-                            var downloadModel = document.getElementById("modelprogress");
-
-                        }
-                    }
-                        className='btn btn-secondary float-right' >Download Model(8MB)</button>
                     <button id='predict-button' onClick={
 
 
@@ -153,6 +178,10 @@ function model() {
                         }
                     } className='btn btn-primary float-right'>Check Score</button>
                 </div>
+
+         
+         
+         
             </div>
             <div className='row mb-5'>
                 <div className='col-12'>

@@ -8,15 +8,10 @@ const TARGET_CLASSES = {
 };
 const MAX_LENGTH = 3;
 let modeljson;
-
-
 function getExtension(filename) {
   var parts = filename.split('.');
   return parts[parts.length - 1];
 } 
-
-
-
 function isVideo(filename) {
   var ext = getExtension(filename);
   switch (ext.toLowerCase()) {
@@ -29,33 +24,23 @@ function isVideo(filename) {
   }
   return false;
 }
-
 function Video() {
   return (
-    <div className='container mt-5' >
-
-
+    <div className='container mt-5'>
  
 
-
-      <div className="progress">
-          <div id="progress" className="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
-
       
       
-
       <div className='row mb-2'>
-        <div className='col-8'>
+        <div className='col-md-4 col-12 mt-2'>
 
+          
         <div className="file-upload">
   <div className="file-select">
-    <div className="file-select-button" id="fileName">Choose File</div>
-    <div className="file-select-name" id="noFile">No file chosen...</div> 
+    <div className="file-select-button" id="fileName">Choose Video</div>
+    <div className="file-select-name" id="noFile">No video chosen...</div> 
     <input id='video-selector' className='file-upload border-0' type='file' accept="video/*" onChange={
           
-
             async function (e) {
               var filename = $("#video-selector").val();
           
@@ -70,14 +55,15 @@ function Video() {
                 $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
               }
             }
-
           } /*multiple */ />
   </div>
 </div>
 
 
+
+
 </div>
-<div className='col-4'>
+<div className='col-md-4 col-12 mt-2'>
       
       
           <button type="button" id='predict-button' onClick={
@@ -86,9 +72,6 @@ function Video() {
               console.log("Video Selected...");
               let reader = new FileReader();
               let file = $("#video-selector").prop('files')[0];
-
-
-
               reader.readAsDataURL(file);
               reader.onload = function () {
                 let videoUrl = reader.result;
@@ -100,6 +83,7 @@ function Video() {
                 var canvas = document.createElement('canvas');
                 var ctx = canvas.getContext('2d');
                 var pro = document.querySelector('#progress');
+                var progressPercentage = document.querySelector('#progressPercentage');
                 function initCanvas(e) {
                   canvas.width = this.videoWidth;
                   canvas.height = this.videoHeight;
@@ -113,9 +97,14 @@ function Video() {
                   https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob#Polyfill
                   */
                   canvas.toBlob(saveFrame, 'image/jpeg');
-                  pro.style.width = "100%";
+
+
+                  pro.style.width = ((this.currentTime / this.duration) * 100).toFixed(2) + '%';
+
+                  // pro.innerHTML = ((this.currentTime / this.duration) * 100).toFixed(2) + ' %';
                   
-                  pro.innerHTML = ((this.currentTime / this.duration) * 100).toFixed(2) + ' %';
+                  progressPercentage.innerHTML = ((this.currentTime / this.duration) * 100).toFixed(2) + ' %';
+
                   // pro.style.width = ((this.currentTime / this.duration) * 100).toFixed(2) + "%";
                   if (this.currentTime < this.duration) {
                     this.play();
@@ -162,7 +151,7 @@ function Video() {
                     console.log((Math.floor((i / gap))));
                     document.getElementById("selected-image" + (Math.floor((i / gap)))).src = img.src;
                     // document.body.appendChild(img);
-                    if (i > (array.length - 2)) {
+                    if (i> (array.length - 2)) {
                       loadTumbnailModel(getThumbnailScore);
                     }
                   }
@@ -225,14 +214,28 @@ function Video() {
                 }
               }
             }
-          } className="btn btn-small btn-light btn-outline-primary" >Generate Thumbnail</button>
+          } className="btn btn-small btn-light btn-outline-primary">Generate Thumbnail</button>
+      
+      
+     
+      
         </div>
 
+        <div className='col-md-4 col-12 mt-2'>
+        <h2 id="progressPercentage"></h2>
+        </div>
+   
       </div>
+  
+
+
+      <div className="progress mb-3">
+          <div id="progress" className="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
 
       <div className='row mb-2'>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -251,7 +254,7 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -270,7 +273,7 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -292,7 +295,7 @@ function Video() {
       <div className='row mb-2'>
         {/*boxes*/}
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -311,7 +314,7 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -330,7 +333,7 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -352,7 +355,7 @@ function Video() {
       <div className='row mb-2'>
         {/*boxes*/}
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -371,7 +374,7 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -390,7 +393,7 @@ function Video() {
           </div>
         </div>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
@@ -411,7 +414,7 @@ function Video() {
       </div>
       <div className='row mb-2'>
         <div className='col-md-4'>
-          <div >
+          <div>
             <div className=' '>
               { /*<div className='icon'>
  <FaFire />
