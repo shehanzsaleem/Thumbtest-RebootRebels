@@ -24,6 +24,15 @@ function isVideo(filename) {
   }
   return false;
 }
+
+
+
+
+ 
+
+
+
+
 function Video() {
   return (
     <div className='container mt-5'>
@@ -244,7 +253,7 @@ function Video() {
  <h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
-                  <img id="selected-image0" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
+                  <img id="selected-image0" />
                   <ol id='prediction-list0'>
                   </ol>
                   <h4 id='prediction-percentage0'></h4>

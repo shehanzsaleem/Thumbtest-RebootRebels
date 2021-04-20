@@ -72,12 +72,7 @@ footer {
 }
 
 .score__container-card {
-  background: linear-gradient(45deg, #01388b 0%, #01388b 100%);
-  box-shadow: 0 6px 20px rgba(134, 153, 189, 0.2);
-  /* width: 470px; */
-  /* height: 500px; */
-  text-decoration: none;
-  border-radius: 4px;
+  background-color: #072a4d;
 }
 
 .score__container-card:nth-child(2) {
@@ -168,7 +163,7 @@ footer {
   display: flex;
   flex-direction: column;
   /* height: 500px; */
-  padding: 24px;
+  padding: 12px;
   align-items: center;
   color: #fff;
 }

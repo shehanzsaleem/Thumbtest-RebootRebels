@@ -21,15 +21,6 @@ let modeljson;
 
 
 
- 
-
-
-
-
-
-
-
-
 
 
 
@@ -83,8 +74,8 @@ function model() {
             
         <div className="file-upload">
   <div className="file-select">
-    <div className="file-select-button" id="fileName">Choose Video</div>
-    <div className="file-select-name" id="noFile">No video chosen...</div> 
+    <div className="file-select-button" id="fileName">Choose Images</div>
+    <div className="file-select-name" id="noFile">No Images chosen...</div> 
     <input id='image-selector' className='file-upload border-0' type='file' accept="image/x-png,image/gif,image/jpeg" onChange={
                         async function (e) {
                             if (Array.from(e.target.files).length > MAX_LENGTH) {
