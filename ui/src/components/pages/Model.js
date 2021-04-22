@@ -6,27 +6,12 @@ import * as tf from '@tensorflow/tfjs';
 import { FaFire } from 'react-icons/fa';
 import { BsXDiamondFill } from 'react-icons/bs';
 import { GiCrystalize } from 'react-icons/gi';
-
-
-
 const TARGET_CLASSES = {
     0: "Badness",
     1: "Goodness"
 };
 const MAX_LENGTH = 3;
 let modeljson;
-
-
-
-
-
-
-
-
-
-
-
-
 function model() {
     return (
         // <IconContext.Provider value={{ color: '#fff', size: 64 }}> 
@@ -34,99 +19,73 @@ function model() {
             <div className='row mb-5'>
                 <div className='col-12'>
                     <div id="modelprogress" className='progress progress-bar progress-bar-striped progress-bar-animated mb-2'>Loading Model</div>
-
-
                 </div>
             </div>
             <div className='row mb-5'>
-              
                 <div className='col-12'>
                     <button id='downloadModel' onClick={
-
-
                         async function () { //Progress bar and Loading of the Model
                             $('.progress-bar').show();
                             console.log("Loading model...");
-
                             modeljson = await tf.loadLayersModel('/model-thumbnail/model.json');
                             // const contentLength = modeljson.headers.get('content-length');
-
                             // console.log(contentLength);
                             // modeljson.summary();
                             console.log("Model loaded.");
                             $('#modelprogress').hide();
                             var downloadModel = document.getElementById("modelprogress");
-
                         }
                     }
                         className='btn btn-secondary' >Download Model(8MB)</button>
-               </div>
-               </div>
-            <div className='row mb-5'>
-
-
-
-                <div className='col-6'>
-                    
-            
-            
-
-            
-        <div className="file-upload">
-  <div className="file-select">
-    <div className="file-select-button" id="fileName">Choose Images</div>
-    <div className="file-select-name" id="noFile">No Images chosen...</div> 
-    <input id='image-selector' className='file-upload border-0' type='file' accept="image/x-png,image/gif,image/jpeg" onChange={
-                        async function (e) {
-                            if (Array.from(e.target.files).length > MAX_LENGTH) {
-                                e.preventDefault();
-                                alert(`Cannot upload files more than ${MAX_LENGTH}`);
-                                return;
-                            }
-                            else {
-                                console.log("Images Selected...");
-                                let reader0 = new FileReader();
-                                let file0 = $("#image-selector").prop('files')[0];
-                                reader0.readAsDataURL(file0);
-                                reader0.onload = function () {
-                                    let dataURL = reader0.result;
-                                    $("#selected-image0").attr("src", dataURL);
-                                    $("#prediction-list0").empty();
-                                }
-                                let reader1 = new FileReader();
-                                let file1 = $("#image-selector").prop('files')[1];
-                                reader1.readAsDataURL(file1);
-                                reader1.onload = function () {
-                                    let dataURL = reader1.result;
-                                    $("#selected-image1").attr("src", dataURL);
-                                    $("#prediction-list1").empty();
-                                }
-                                let reader2 = new FileReader();
-                                let file2 = $("#image-selector").prop('files')[2];
-                                reader2.readAsDataURL(file2);
-                                reader2.onload = function () {
-                                    let dataURL = reader2.result;
-                                    $("#selected-image2").attr("src", dataURL);
-                                    $("#prediction-list2").empty();
-                                }
-                            }
-                        }
-                    } multiple />
-  </div>
-</div>
-
-            
-            
                 </div>
-             
-
-             
+            </div>
+            <div className='row mb-5'>
+                <div className='col-6'>
+                    <div className="file-upload">
+                        <div className="file-select">
+                            <div className="file-select-button" id="fileName">Choose Images</div>
+                            <div className="file-select-name" id="noFile">No Images chosen...</div>
+                            <input id='image-selector' className='file-upload border-0' type='file' accept="image/x-png,image/gif,image/jpeg" onChange={
+                                async function (e) {
+                                    if (Array.from(e.target.files).length > MAX_LENGTH) {
+                                        e.preventDefault();
+                                        alert(`Cannot upload files more than ${MAX_LENGTH}`);
+                                        return;
+                                    }
+                                    else {
+                                        console.log("Images Selected...");
+                                        let reader0 = new FileReader();
+                                        let file0 = $("#image-selector").prop('files')[0];
+                                        reader0.readAsDataURL(file0);
+                                        reader0.onload = function () {
+                                            let dataURL = reader0.result;
+                                            $("#selected-image0").attr("src", dataURL);
+                                            $("#prediction-list0").empty();
+                                        }
+                                        let reader1 = new FileReader();
+                                        let file1 = $("#image-selector").prop('files')[1];
+                                        reader1.readAsDataURL(file1);
+                                        reader1.onload = function () {
+                                            let dataURL = reader1.result;
+                                            $("#selected-image1").attr("src", dataURL);
+                                            $("#prediction-list1").empty();
+                                        }
+                                        let reader2 = new FileReader();
+                                        let file2 = $("#image-selector").prop('files')[2];
+                                        reader2.readAsDataURL(file2);
+                                        reader2.onload = function () {
+                                            let dataURL = reader2.result;
+                                            $("#selected-image2").attr("src", dataURL);
+                                            $("#prediction-list2").empty();
+                                        }
+                                    }
+                                }
+                            } multiple />
+                        </div>
+                    </div>
+                </div>
                 <div className='col-6'>
                     <button id='predict-button' onClick={
-
-
-
-
                         async function () {
                             console.log("Button Clicked...");
                             for (let i = 0; i < 3; i++) {
@@ -157,22 +116,9 @@ function model() {
                                     $("#prediction-percentage" + i).append(`${(p.probability * 100).toFixed(2)}%`);
                                 });
                             }
-
-
-
-
-
-
-
-
-
                         }
                     } className='btn btn-primary float-right'>Check Score</button>
                 </div>
-
-         
-         
-         
             </div>
             <div className='row mb-5'>
                 <div className='col-12'>
@@ -197,21 +143,17 @@ function model() {
                 <div className='col-12'>
                     {/* <h2 className=''>Your Scores</h2> */}
                 </div>
-
-
                 <div className='col-lg-4 col-md-12'>
                     <div className='score__container-card'>
                         <div className='score__container-cardInfo'>
-                          
                             {/* <h3>Second </h3> */}
                             <ol id='prediction-list0'>
                             </ol>
                             <h4 id='prediction-percentage0'></h4>
                             <div class="containerp">
                                 <div className='image-wrapper'>
-                                  
-                                <img id="selected-image0" className="score_best" 
-   />
+                                    <img id="selected-image0" className="score_best"
+                                    />
                                 </div>  </div>
                             {/* <p>per month</p>
  <ul className='score__container-features'>
@@ -228,7 +170,6 @@ function model() {
                 <div className='col-lg-4 col-md-12'>
                     <div className='score__container-card'>
                         <div className='score__container-cardInfo'>
-                           
                             {/* <h3>Best</h3> */}
                             <ol id='prediction-list1'>
                             </ol>
@@ -253,14 +194,13 @@ function model() {
                 <div className='col-lg-4 col-md-12'>
                     <div className='score__container-card'>
                         <div className='score__container-cardInfo'>
-                           
                             {/* <h3>Third</h3> */}
                             <ol id='prediction-list2'>
                             </ol>
                             <h4 id='prediction-percentage2'></h4>
                             <div class="containerp">
                                 <div className='image-wrapper'>
-                                <img id="selected-image2" className="score_best"  />
+                                    <img id="selected-image2" className="score_best" />
                                 </div></div>
                             {/* <div className="score_third">
 </div> */}
@@ -276,16 +216,6 @@ function model() {
                         </div>
                     </div>
                 </div>
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ let modeljson;
 function getExtension(filename) {
   var parts = filename.split('.');
   return parts[parts.length - 1];
-} 
+}
 function isVideo(filename) {
   var ext = getExtension(filename);
   switch (ext.toLowerCase()) {
@@ -24,57 +24,41 @@ function isVideo(filename) {
   }
   return false;
 }
-
-
-
-
- 
-
-
-
-
+var fs = require('fs'),
+  request = require('request');
+var download = function (uri, filename, callback) {
+  request.head(uri, function (err, res, body) {
+    console.log('content-type:', res.headers['content-type']);
+    console.log('content-length:', res.headers['content-length']);
+    request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+  });
+};
 function Video() {
   return (
     <div className='container mt-5'>
- 
-
-      
-      
       <div className='row mb-2'>
         <div className='col-md-4 col-12 mt-2'>
-
-          
-        <div className="file-upload">
-  <div className="file-select">
-    <div className="file-select-button" id="fileName">Choose Video</div>
-    <div className="file-select-name" id="noFile">No video chosen...</div> 
-    <input id='video-selector' className='file-upload border-0' type='file' accept="video/*" onChange={
-          
-            async function (e) {
-              var filename = $("#video-selector").val();
-          
-              if (/^\s*$/.test(filename)) {
-               
-                $(".file-upload").removeClass('active');
-                $("#noFile").text("No file chosen..."); 
-              }
-              else {
-          
-                $(".file-upload").addClass('active');
-                $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
-              }
-            }
-          } /*multiple */ />
-  </div>
-</div>
-
-
-
-
-</div>
-<div className='col-md-4 col-12 mt-2'>
-      
-      
+          <div className="file-upload">
+            <div className="file-select">
+              <div className="file-select-button" id="fileName">Choose Video</div>
+              <div className="file-select-name" id="noFile">No video chosen...</div>
+              <input id='video-selector' className='file-upload border-0' type='file' accept="video/*" onChange={
+                async function (e) {
+                  var filename = $("#video-selector").val();
+                  if (/^\s*$/.test(filename)) {
+                    $(".file-upload").removeClass('active');
+                    $("#noFile").text("No file chosen...");
+                  }
+                  else {
+                    $(".file-upload").addClass('active');
+                    $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+                  }
+                }
+              } /*multiple */ />
+            </div>
+          </div>
+        </div>
+        <div className='col-md-4 col-12 mt-2'>
           <button type="button" id='predict-button' onClick={
             async function () {
               console.log("Button Clicked...");
@@ -106,14 +90,9 @@ function Video() {
                   https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob#Polyfill
                   */
                   canvas.toBlob(saveFrame, 'image/jpeg');
-
-
                   pro.style.width = ((this.currentTime / this.duration) * 100).toFixed(2) + '%';
-
                   // pro.innerHTML = ((this.currentTime / this.duration) * 100).toFixed(2) + ' %';
-                  
                   progressPercentage.innerHTML = ((this.currentTime / this.duration) * 100).toFixed(2) + ' %';
-
                   // pro.style.width = ((this.currentTime / this.duration) * 100).toFixed(2) + "%";
                   if (this.currentTime < this.duration) {
                     this.play();
@@ -121,6 +100,11 @@ function Video() {
                 }
                 function saveFrame(blob) {
                   array.push(blob);
+
+                  
+
+
+
                 }
                 function revokeURL(e) {
                   URL.revokeObjectURL(this.src);
@@ -130,20 +114,11 @@ function Video() {
                   // do whatever with the frames
                   var gap = Math.ceil((array.length / 10));
                   var newArray = []
-                  // for (var i = 0; i < array.length; i++) {
-                  // img = new Image();
-                  // img.onload = revokeURL;
-                  // img.src = URL.createObjectURL(array[i]);
-                  // document.body.appendChild(img);
-                  // }
-                  // for (var i = 0; i < array.length; i+=gap) {
-                  // img = new Image();
-                  // img.onload = revokeURL;
-                  // img.src = URL.createObjectURL(array[i]);
-                  // newArray.push(img.src);
-                  // // document.getElementById("selected-image0").src = 
-                  // // document.body.appendChild(img);
-                  // }
+              
+
+
+                  var minimum = -1;
+
                   for (var i = 0; i < array.length; i++) {
                     img = new Image();
                     img.onload = revokeURL;
@@ -157,10 +132,46 @@ function Video() {
                     // }).catch(function (err) {
                     // // Handle error
                     // });
+
+
                     console.log((Math.floor((i / gap))));
+
+                    if (minimum < (Math.floor((i / gap)))){
+
+
+                  
+
+
+
+
+
                     document.getElementById("selected-image" + (Math.floor((i / gap)))).src = img.src;
+
+
+
+                    var data = array[(Math.floor((i / gap)))];
+                    var tempLink; 
+                    var csvURL = window.URL.createObjectURL(data);
+                    tempLink = document.createElement('a');
+                    tempLink.href = csvURL;
+                    tempLink.setAttribute('download', 'Thumbnail_'+(Math.floor((i / gap)))+'.jpg');
+                    tempLink.click();
+
+                    console.log("PETER");
+
+
+                    minimum++
+                  }
+
+
+
+
+
+
+
+
                     // document.body.appendChild(img);
-                    if (i> (array.length - 2)) {
+                    if (i > (array.length - 2)) {
                       loadTumbnailModel(getThumbnailScore);
                     }
                   }
@@ -224,33 +235,23 @@ function Video() {
               }
             }
           } className="btn btn-small btn-light btn-outline-primary">Generate Thumbnail</button>
-      
-      
-     
-      
         </div>
-
         <div className='col-md-4 col-12 mt-2'>
-        <h2 id="progressPercentage"></h2>
+          <h2 id="progressPercentage"></h2>
         </div>
-   
       </div>
-  
-
-
       <div className="progress mb-3">
-          <div id="progress" className="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
+        <div id="progress" className="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
       <div className='row mb-2'>
         <div className='col-md-4'>
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image0" />
@@ -266,10 +267,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image1" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -285,10 +286,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image2" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -307,10 +308,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image3" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -326,10 +327,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image4" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -345,10 +346,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image5" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -367,10 +368,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image6" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -386,10 +387,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image7" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -405,10 +406,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image8" /*className="score_second" /*src="./sample_thumbnail_01"*/ />
@@ -426,10 +427,10 @@ function Video() {
           <div>
             <div className=' '>
               { /*<div className='icon'>
- <FaFire />
- </div> */}
+<FaFire />
+</div> */}
               {/*<ol id='prediction-list0'></ol> 
- <h4 id='prediction-percentage0'></h4>*/}
+<h4 id='prediction-percentage0'></h4>*/}
               <div className="containerp">
                 <div /*className='image-wrapper'*/>
                   <img id="selected-image9" /*className="score_second" /*src="./sample_thumbnail_01"*/ />

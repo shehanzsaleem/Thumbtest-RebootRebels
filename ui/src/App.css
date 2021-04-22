@@ -364,9 +364,6 @@ img {
 .contactUs {
   width: 100%;
   height: 100%;
-  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/contact.jpg");*/
-  /*consisting of a progressive transition between two colors along a straight line of the image */
-  /* height: 110vh; */
   background-size: cover;
   background-position: center;
   background-color: rgb(31, 32, 37);
@@ -524,10 +521,7 @@ input[type="submit"] {
   .contactcontainer {
     flex-direction: column;
   }
-
-   {
-    margin-bottom: 40px;
-  }
+ 
 
   .contactcontainer .contactInfo {
     width: 100%;
