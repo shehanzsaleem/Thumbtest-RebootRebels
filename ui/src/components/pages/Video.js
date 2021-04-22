@@ -110,10 +110,7 @@ function Video() {
                   var gap = Math.ceil((array.length / 10));
                   var newArray = []
               
-
-
                   var minimum = -1;
-
                   for (var i = 0; i < array.length; i++) {
                     img = new Image();
                     img.onload = revokeURL;
@@ -127,36 +124,43 @@ function Video() {
                     // }).catch(function (err) {
                     // // Handle error
                     // });
-                    console.log((Math.floor((i / gap))));
+                    // console.log((Math.floor((i / gap))));
                     if (minimum < (Math.floor((i / gap)))){
+                      newArray.push(i);
                     document.getElementById("selected-image" + (Math.floor((i / gap)))).src = img.src;
-
-
-                    var data = array[(Math.floor((i / gap)))];
-                    var tempLink; 
-                    var csvURL = window.URL.createObjectURL(data);
-                    tempLink = document.createElement('a');
-                    tempLink.href = csvURL;
-                    tempLink.setAttribute('download', 'Thumbnail_'+(Math.floor((i / gap)))+'.jpg');
-                    tempLink.click();
-
-                    console.log("PETER");
-
+                    
+                    
                     minimum++
                   }
-
-
-
-
-
-
-
-
+                 
                     // document.body.appendChild(img);
                     if (i > (array.length - 2)) {
+                      
+                      downloadThumbnails();
                       loadTumbnailModel(getThumbnailScore);
                     }
+                    function downloadThumbnails(){
+                      console.log("FRANK")
+                  
+                      for (var j = 0; j < newArray.length; j++) {
+    
+                        
+                      console.log("STARTING")
+                      
+                        var data = array[newArray[j]];
+                        var tempLink; 
+                        var csvURL = window.URL.createObjectURL(data);
+                        tempLink = document.createElement('a');
+                        tempLink.href = csvURL;
+                        tempLink.setAttribute('download', 'Thumbnail_'+(j)+'.jpg');
+                        tempLink.click();
+    
+    
+                      }
+    
+                    }
                   }
+                  console.log(newArray);
                   // for (var j = 0; j < newArray.length; j++) {
                   // document.getElementById("selected-image"+j).src = newArray[j];
                   // }
@@ -210,9 +214,11 @@ function Video() {
                     $("#prediction-percentage" + i).empty();
                     top5.forEach(function (p) {
                       // $("#prediction-list"+i).append(`<li>${p.className}: ${p.probability.toFixed(6)}</li>`);
+                      $("#prediction-percentage" + i).append(`Thumbnail_${i} - `);
                       $("#prediction-percentage" + i).append(`${(p.probability * 100).toFixed(2)}%`);
                     });
                   }
+ 
                 }
               }
             }
