@@ -30,6 +30,9 @@ function Navbar() {
             <Link className="nav-link ml-4" to="/Video">Generate Thumbnail</Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link ml-4" to="/Feedback">Human Feedback</Link>
+          </li>
+          <li className="nav-item">
             <Link className="nav-link ml-4" to="/About">How it Works</Link>
           </li>
           <li className="nav-item">

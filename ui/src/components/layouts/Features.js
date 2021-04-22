@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import icon1 from "../images/feature-tile-icon-01.svg";
 import icon2 from "../images/feature-tile-icon-02.svg";
 import icon3 from "../images/feature-tile-icon-03.svg";
 import icon4 from "../images/feature-tile-icon-04.svg";
 import icon5 from "../images/feature-tile-icon-05.svg";
 import icon6 from "../images/feature-tile-icon-06.svg";
+
 function Features({
     lightBg,
     topLine,

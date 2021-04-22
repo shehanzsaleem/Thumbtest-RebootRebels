@@ -100,11 +100,6 @@ function Video() {
                 }
                 function saveFrame(blob) {
                   array.push(blob);
-
-                  
-
-
-
                 }
                 function revokeURL(e) {
                   URL.revokeObjectURL(this.src);
@@ -132,21 +127,9 @@ function Video() {
                     // }).catch(function (err) {
                     // // Handle error
                     // });
-
-
                     console.log((Math.floor((i / gap))));
-
                     if (minimum < (Math.floor((i / gap)))){
-
-
-                  
-
-
-
-
-
                     document.getElementById("selected-image" + (Math.floor((i / gap)))).src = img.src;
-
 
 
                     var data = array[(Math.floor((i / gap)))];
@@ -158,7 +141,6 @@ function Video() {
                     tempLink.click();
 
                     console.log("PETER");
-
 
                     minimum++
                   }

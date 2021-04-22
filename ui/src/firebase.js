@@ -6,27 +6,27 @@ import firebase from 'firebase';
 // import * as firebase from "firebase/app"
 
 // If you enabled Analytics in your project, add the Firebase SDK for Analytics
-import "firebase/analytics";
+// import "firebase/analytics";
 
 // Add the Firebase products that you want to use
-import "firebase/auth";
-import "firebase/firestore";
+// import "firebase/auth";
+// import "firebase/firestore";
 
-var firebaseConfig = {
-  apiKey: "AIzaSyDDAHBXMPNTWSTRo47GT7p279KaDYQc8eY",
-  authDomain: "thumbtest-f4efc.firebaseapp.com",
-  projectId: "thumbtest-f4efc",
-  storageBucket: "thumbtest-f4efc.appspot.com",
-  messagingSenderId: "1040553873006",
-  appId: "1:1040553873006:web:b70fadc59b2917aadea07f",
-  measurementId: "G-BJHLS9XH93"
-};
+// var firebaseConfig = {
+//   apiKey: "AIzaSyDDAHBXMPNTWSTRo47GT7p279KaDYQc8eY",
+//   authDomain: "thumbtest-f4efc.firebaseapp.com",
+//   projectId: "thumbtest-f4efc",
+//   storageBucket: "thumbtest-f4efc.appspot.com",
+//   messagingSenderId: "1040553873006",
+//   appId: "1:1040553873006:web:b70fadc59b2917aadea07f",
+//   measurementId: "G-BJHLS9XH93"
+// };
 
-  const firebase = firebase.initializeApp(firebaseConfig);
+  // const firebase = firebase.initializeApp(firebaseConfig);
 
-  export const auth = firebase.auth();
+  // export const auth = firebase.auth();
 
-  export default firebase;
+  // export default firebase;
 
 
 
